@@ -21,9 +21,19 @@ require(yaml)
 
 # Title Page
 
-Include your names
+Nahar Singh 2860210
 
-Include the tutorial group number
+Rayan Kajdouh
+
+Joran
+
+Wouter
+
+Romijn
+
+Tibbe
+
+Tutorial group 1
 
 Include your tutorial lecturer's name
 
@@ -33,11 +43,13 @@ Use APA referencing throughout your document. [Here's a link to some explanation
 
 ## 1.1 Describe the Social Problem
 
-Include the following:
+**Social Problem:** People in Amsterdam who struggle to make ends meet.
 
--   Why is this relevant?
+Many people living in Amsterdam have difficulty covering their daily expenses, such as rent, food and energy bills. This financial pressure can lead to stress, debt, and a lower quality of life.
 
--   Ik ben er
+**Why is this relevant?**
+
+This issue is relevant because approximately one in five people in Amsterdam struggles to make ends meet. Rising living costs, high housing prices, inflation, and relatively low incomes are some of the factors contributing to this problem. As a result, many residents face financial insecurity, making it an important social issue that affects both individuals and the wider community.
 
 # Part 2 - Data Sourcing
 
@@ -69,9 +81,9 @@ These are things that are usually included in the metadata of the dataset. For y
 
 Think of things like:
 
--   Do the variables contain health information or SES information?
+- Do the variables contain health information or SES information?
 
--   Have they been measured by interviewing individuals or is the data coming from administrative sources?
+- Have they been measured by interviewing individuals or is the data coming from administrative sources?
 
 *For the sake of this example, I will continue with the assignment...*
 
@@ -156,7 +168,7 @@ Here you provide a description of why the plot above is relevant to your specifi
 ## 5.1 Github repository link
 
 Provide the link to your PUBLIC repository here: ...
- 
+
 ## 5.2 Reference list
 
 Use APA referencing throughout your document.
