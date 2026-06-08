@@ -67,13 +67,9 @@ View(gemiddeldehuur2023)
 
 ```{r}
 library(readr)
-moeiterondkomennederland <- read_csv("data/moeiterondkomennederland.csv")
-View(moeiterondkomennederland)
-
-library(readr)
-moeiterondkomennederland <- read_delim("data/moeiterondkomennederland.csv", 
-    delim = ";")
-View(moeiterondkomennederland)
+moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+View(moeiteRondkomenAlleJaren)
 ```
 
 ## 2.2 Provide a short summary of the dataset(s)
