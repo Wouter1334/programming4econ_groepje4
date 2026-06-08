@@ -57,9 +57,6 @@ This issue is relevant because approximately one in five people in Amsterdam str
 
 Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
 
-
-```
-
 midwest is an example dataset included in the tidyverse package
 
 ```{r}
@@ -68,7 +65,6 @@ gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
 View(gemiddeldehuur2023)
 ```
 
-<<<<<<< HEAD
 ```{r}
 library(readr)
 moeiterondkomennederland <- read_csv("data/moeiterondkomennederland.csv")
@@ -80,9 +76,6 @@ moeiterondkomennederland <- read_delim("data/moeiterondkomennederland.csv",
 View(moeiterondkomennederland)
 ```
 
-
-=======
->>>>>>> 460033be50ef3abb6ee7a1de0d8cd7bffb252f89
 ## 2.2 Provide a short summary of the dataset(s)
 
 ```{r}
