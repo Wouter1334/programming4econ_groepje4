@@ -120,6 +120,11 @@ amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
 
 ```
 
+```{r}
+library(readr)
+GemiddeldInkomenPerWijk <- read_csv("data/GemiddeldInkomenPerWijk.csv")
+View(GemiddeldInkomenPerWijk)
+```
 
 
 ## 2.2 Provide a short summary of the dataset(s)
