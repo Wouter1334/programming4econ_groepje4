@@ -72,6 +72,14 @@ moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv",
 View(moeiteRondkomenAlleJaren)
 ```
 
+```{r}
+library(readr)
+InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+View(InkomenWijkenAmsterdam)
+```
+
+
 ## 2.2 Provide a short summary of the dataset(s)
 
 ```{r}
