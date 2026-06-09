@@ -70,15 +70,47 @@ library(readr)
 moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
 View(moeiteRondkomenAlleJaren)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+amsterdam_wijken_nieuw <- amsterdam_wijken[
+  , !(names(amsterdam_wijken) %in% c("ID", "Leeftijd", "Marges"))
+]
+
+library(readxl)
+Wijken_Amsterdam_2024_CBS <- read_excel("data/Wijken_Amsterdam_2024_CBS.xlsx")
+View(Wijken_Amsterdam_2024_CBS)
+
+Wijken_Amsterdam_2024_CBS$Codering_3 <- Wijken_Amsterdam_2024_CBS$`CBS Wijkcode`
+Wijken_Amsterdam_2024_CBS$`CBS Wijkcode` <- NULL
+
+amsterdam_wijken_nieuw2 <- inner_join(Wijken_Amsterdam_2024_CBS, amsterdam_wijken_nieuw, by = "Codering_3")
+
+
+library(dplyr)
+
+amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
+  filter(Gemeentenaam_1 == "Amsterdam") %>%
+  filter(SoortRegio_2 == "Wijk")
+
+
 ```
 
-```{r}
-library(readr)
-InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
-    delim = ";", escape_double = FALSE, trim_ws = TRUE)
-View(InkomenWijkenAmsterdam)
-```
-
+\
 
 ## 2.2 Provide a short summary of the dataset(s)
 
