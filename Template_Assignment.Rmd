@@ -122,8 +122,8 @@ amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
 
 ```{r}
 library(readr)
-GemiddeldInkomenPerWijk <- read_csv("data/GemiddeldInkomenPerWijk.csv")
-View(GemiddeldInkomenPerWijk)
+InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
+View(InkomenPerWijk2023Gefilterd)
 ```
 
 
