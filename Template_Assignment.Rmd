@@ -65,6 +65,16 @@ gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
 View(gemiddeldehuur2023)
 ```
 
+
+```{r}
+library(readr)
+InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+View(InkomenWijkenAmsterdam)
+```
+
+
+
 ```{r}
 library(readr)
 moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
@@ -110,7 +120,7 @@ amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
 
 ```
 
-\
+
 
 ## 2.2 Provide a short summary of the dataset(s)
 
