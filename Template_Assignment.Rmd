@@ -11,6 +11,8 @@ output: pdf_document
 install.packages("tidyverse")
 install.packages("yaml")
 install.packages("rmarkdown")
+install.packages("ggplot2")
+install.packages("dplyr")
 ```
 
 ```{r packages}
@@ -63,8 +65,25 @@ midwest is an example dataset included in the tidyverse package
 library(readxl)
 gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
 View(gemiddeldehuur2023)
-```
 
+library(dplyr)
+library(ggplot2)
+
+per_jaar <- gemiddeldehuur2023 %>%
+  group_by(Jaar) %>%
+  summarise(gem_huur = mean(`Huur gemiddeld`, na.rm = TRUE))
+
+ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Gemiddelde huurprijs Amsterdam (alle wijken)",
+    x = "Jaar",
+    y = "Huurprijs (€)"
+  ) +
+  theme_minimal()
+
+```
 
 ```{r}
 library(readr)
@@ -73,29 +92,11 @@ InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv",
 View(InkomenWijkenAmsterdam)
 ```
 
-
-
 ```{r}
 library(readr)
 moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
 View(moeiteRondkomenAlleJaren)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 amsterdam_wijken_nieuw <- amsterdam_wijken[
   , !(names(amsterdam_wijken) %in% c("ID", "Leeftijd", "Marges"))
@@ -125,7 +126,6 @@ library(readr)
 InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
 View(InkomenPerWijk2023Gefilterd)
 ```
-
 
 ## 2.2 Provide a short summary of the dataset(s)
 
