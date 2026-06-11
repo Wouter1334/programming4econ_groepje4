@@ -111,12 +111,16 @@ Wijken_Amsterdam_2024_CBS$`CBS Wijkcode` <- NULL
 
 amsterdam_wijken_nieuw2 <- inner_join(Wijken_Amsterdam_2024_CBS, amsterdam_wijken_nieuw, by = "Codering_3")
 
-
 library(dplyr)
 
 amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
   filter(Gemeentenaam_1 == "Amsterdam") %>%
   filter(SoortRegio_2 == "Wijk")
+
+amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
+  select(-WijkenEnBuurten, -SoortRegio_2, -Gemeentenaam_1)
+
+View(amsterdam_wijken_nieuw2)
 
 
 ```
