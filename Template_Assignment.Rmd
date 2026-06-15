@@ -84,7 +84,6 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
     y = "Huurprijs (€)"
   ) +
   theme_minimal()
-
 ```
 
 Grafiek 4:
@@ -173,33 +172,39 @@ library(dplyr)
 library(ggplot2)
 library(readr)
 library(cbsodataR)
-library(leaflet)
 
+# 1. Geografische data inladen
 wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
 
-ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
-
+# 2. CBS data inladen en filteren voor Amsterdam 2024
 rondkomen_raw <- read_delim("data/moeiteRondkomenAlleJaren.csv",
   delim = ";",
   locale = locale(decimal_mark = ".")
 )
+
 rondkomen_2024 <- rondkomen_raw %>%
   filter(
     Perioden == "2024JJ00",
     SoortRegio_2 == "Wijk    ",
-    Gemeentenaam_1 == "Amsterdam                               "
+    Gemeentenaam_1 == "Amsterdam                                "
   ) %>%
   mutate(
     WijkenEnBuurten = trimws(WijkenEnBuurten),
     MoeiteMetRondkomen_32 = as.numeric(MoeiteMetRondkomen_32)
   ) %>%
   select(WijkenEnBuurten, MoeiteMetRondkomen_32)
-ams_joined <- ams %>%
+
+# 3. Kaart en data aan elkaar koppelen
+ams_joined <- wijken %>%
   mutate(statcode_clean = trimws(statcode)) %>%
+  filter(statcode_clean %in% rondkomen_2024$WijkenEnBuurten) %>%
   left_join(rondkomen_2024, by = c("statcode_clean" = "WijkenEnBuurten"))
+
+# 4. Categorieën en kleuren instellen voor de legenda
 breaks <- c(6.7, 14.8, 19.8, 23.6, 27.7, 33.4, 36.6)
 labels <- c("6,7 - 14,8", "14,8 - 19,8", "19,8 - 23,6",
             "23,6 - 27,7", "27,7 - 33,4", "33,4 - 36,6")
+
 ams_joined <- ams_joined %>%
   mutate(
     rondkomen_cat = cut(
@@ -209,7 +214,10 @@ ams_joined <- ams_joined %>%
       include.lowest = TRUE
     )
   )
+
 kleuren <- c("#fde0d0", "#f7b89c", "#f08060", "#d94f35", "#b81c1c", "#7a0000")
+
+# 5. De kaart plotten
 ggplot(ams_joined) +
   geom_sf(aes(fill = rondkomen_cat), color = "white", linewidth = 0.2) +
   scale_fill_manual(
@@ -230,30 +238,6 @@ ggplot(ams_joined) +
     legend.title = element_text(size = 9),
     legend.text = element_text(size = 8),
     legend.position = "left"
-  )
-kleurenpalet <- colorNumeric(
-  palette = c("#fde0d0", "#f7b89c", "#f08060", "#d94f35", "#b81c1c", "#7a0000"),
-  domain = ams_joined$MoeiteMetRondkomen_32,
-  na.color = "#cccccc"
-)
-leaflet(ams_joined) %>%
-  addPolygons(
-    fillColor = ~kleurenpalet(MoeiteMetRondkomen_32),
-    fillOpacity = 0.8,
-    color = "white",
-    weight = 1,
-    label = ~paste0(statnaam, ": ", round(MoeiteMetRondkomen_32, 1), "%"),
-    labelOptions = labelOptions(
-      style = list("font-size" = "13px"),
-      textsize = "13px",
-      direction = "auto"
-    )
-  ) %>%
-  addLegend(
-    pal = kleurenpalet,
-    values = ~MoeiteMetRondkomen_32,
-    title = "% moeite met rondkomen",
-    position = "bottomleft"
   )
 ```
 
