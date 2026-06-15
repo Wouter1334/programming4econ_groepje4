@@ -13,6 +13,7 @@ install.packages("yaml")
 install.packages("rmarkdown")
 install.packages("ggplot2")
 install.packages("dplyr")
+install.packages(c("sf", "tmap" , "cbsodataR"))
 ```
 
 ```{r packages}
@@ -149,8 +150,33 @@ amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
 
 View(amsterdam_wijken_nieuw2)
 
+```
+
+
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(cbsodataR)
+
+
+wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+
+# Filter to Amsterdam (gemeente code GM0363)
+ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
+
+# Plot
+library(ggplot2)
+ggplot(ams) +
+  geom_sf(fill = "lightblue", color = "white", linewidth = 0.2) +
+  theme_void() +
+  labs(title = "Amsterdam Neighborhoods (Wijken)")
+
+
 
 ```
+
 
 ```         
 
@@ -253,6 +279,16 @@ Here you provide a description of why the plot above is relevant to your specifi
 # Part 4 - Discussion
 
 ## 4.1 Discuss your findings
+
+The findings indicate that financial hardship in Amsterdam is closely related to rising living costs and differences in income across neighbourhoods. The rental price data show a strong increase in average rents between 2005 and 2023, with average rents more than doubling during this period. This suggests that housing has become significantly less affordable, especially for households whose incomes have not increased at the same pace.
+
+The income dataset reveals substantial differences in average household income between Amsterdam neighbourhoods. Some neighbourhoods have considerably higher average incomes than others, indicating that residents do not experience rising living costs in the same way. For households in lower-income neighbourhoods, increasing housing costs are likely to have a greater impact on their financial situation because a larger share of their income must be spent on essential expenses.
+
+The dataset on difficulties making ends meet provides further evidence that financial vulnerability remains an important issue in Amsterdam. When viewed together, the income, housing, and financial hardship data suggest that residents with lower incomes are more likely to experience financial pressure. Rising rents, combined with increasing costs for food, energy, and other necessities, may leave these households with limited financial flexibility.
+
+External factors should also be considered. The COVID-19 pandemic affected employment, income security, and economic activity, while the subsequent period of inflation increased the cost of living. These developments likely intensified financial difficulties for many residents and may help explain why a significant share of Amsterdam's population continues to struggle to make ends meet.
+
+A limitation of this analysis is that it does not include all possible determinants of financial wellbeing, such as debt levels, savings, household composition, or educational attainment. Nevertheless, the combined evidence from the datasets suggests that rising housing costs and unequal income levels are key factors contributing to financial insecurity in Amsterdam.
 
 # Part 5 - Reproducibility
 
