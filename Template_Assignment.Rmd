@@ -85,6 +85,30 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
 
 ```
 
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+moeite_per_jaar <- moeiteRondkomenAlleJaren %>%
+  mutate(Jaar = as.numeric(substr(Perioden, 1, 4))) %>%
+  group_by(Jaar) %>%
+  summarise(
+    gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)
+  )
+
+ggplot(moeite_per_jaar, aes(x = Jaar, y = gem_moeite)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Gemiddelde moeite met rondkomen per jaar",
+    x = "Jaar",
+    y = "Moeite met rondkomen"
+  ) +
+  theme_minimal()
+```
+
 ```{r}
 library(readr)
 InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
