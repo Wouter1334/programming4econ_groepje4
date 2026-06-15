@@ -13,6 +13,7 @@ install.packages("yaml")
 install.packages("rmarkdown")
 install.packages("ggplot2")
 install.packages("dplyr")
+install.packages(c("sf", "tmap" , "cbsodataR"))
 ```
 
 ```{r packages}
@@ -125,8 +126,33 @@ amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
 
 View(amsterdam_wijken_nieuw2)
 
+```
+
+
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(cbsodataR)
+
+
+wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+
+# Filter to Amsterdam (gemeente code GM0363)
+ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
+
+# Plot
+library(ggplot2)
+ggplot(ams) +
+  geom_sf(fill = "lightblue", color = "white", linewidth = 0.2) +
+  theme_void() +
+  labs(title = "Amsterdam Neighborhoods (Wijken)")
+
+
 
 ```
+
 
 ```         
 
