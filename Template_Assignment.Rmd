@@ -89,14 +89,27 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
 library(readr)
 InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
-View(InkomenWijkenAmsterdam)
+
+library(readr)
+InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
+View(InkomenPerWijk2023Gefilterd)
+
 ```
 
 ```{r}
 library(readr)
 moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
-View(moeiteRondkomenAlleJaren)
+
+library(dplyr)
+
+amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
+  filter(Gemeentenaam_1 == "Amsterdam") %>%
+  filter(SoortRegio_2 == "Wijk")
+
+amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
+  select(-WijkenEnBuurten, -SoortRegio_2, -Gemeentenaam_1)
+
 
 amsterdam_wijken_nieuw <- amsterdam_wijken[
   , !(names(amsterdam_wijken) %in% c("ID", "Leeftijd", "Marges"))
@@ -111,24 +124,14 @@ Wijken_Amsterdam_2024_CBS$`CBS Wijkcode` <- NULL
 
 amsterdam_wijken_nieuw2 <- inner_join(Wijken_Amsterdam_2024_CBS, amsterdam_wijken_nieuw, by = "Codering_3")
 
-library(dplyr)
-
-amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
-  filter(Gemeentenaam_1 == "Amsterdam") %>%
-  filter(SoortRegio_2 == "Wijk")
-
-amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
-  select(-WijkenEnBuurten, -SoortRegio_2, -Gemeentenaam_1)
 
 View(amsterdam_wijken_nieuw2)
 
 
 ```
 
-```{r}
-library(readr)
-InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
-View(InkomenPerWijk2023Gefilterd)
+
+
 ```
 
 ## 2.2 Provide a short summary of the dataset(s)
