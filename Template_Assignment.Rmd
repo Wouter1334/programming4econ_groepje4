@@ -173,10 +173,10 @@ library(ggplot2)
 library(readr)
 library(cbsodataR)
 
-# 1. Geografische data inladen
 wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
 
-# 2. CBS data inladen en filteren voor Amsterdam 2024
+ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
+
 rondkomen_raw <- read_delim("data/moeiteRondkomenAlleJaren.csv",
   delim = ";",
   locale = locale(decimal_mark = ".")
@@ -186,7 +186,7 @@ rondkomen_2024 <- rondkomen_raw %>%
   filter(
     Perioden == "2024JJ00",
     SoortRegio_2 == "Wijk    ",
-    Gemeentenaam_1 == "Amsterdam                                "
+    Gemeentenaam_1 == "Amsterdam                               "
   ) %>%
   mutate(
     WijkenEnBuurten = trimws(WijkenEnBuurten),
@@ -194,13 +194,10 @@ rondkomen_2024 <- rondkomen_raw %>%
   ) %>%
   select(WijkenEnBuurten, MoeiteMetRondkomen_32)
 
-# 3. Kaart en data aan elkaar koppelen
-ams_joined <- wijken %>%
+ams_joined <- ams %>%
   mutate(statcode_clean = trimws(statcode)) %>%
-  filter(statcode_clean %in% rondkomen_2024$WijkenEnBuurten) %>%
   left_join(rondkomen_2024, by = c("statcode_clean" = "WijkenEnBuurten"))
 
-# 4. Categorieën en kleuren instellen voor de legenda
 breaks <- c(6.7, 14.8, 19.8, 23.6, 27.7, 33.4, 36.6)
 labels <- c("6,7 - 14,8", "14,8 - 19,8", "19,8 - 23,6",
             "23,6 - 27,7", "27,7 - 33,4", "33,4 - 36,6")
@@ -217,7 +214,6 @@ ams_joined <- ams_joined %>%
 
 kleuren <- c("#fde0d0", "#f7b89c", "#f08060", "#d94f35", "#b81c1c", "#7a0000")
 
-# 5. De kaart plotten
 ggplot(ams_joined) +
   geom_sf(aes(fill = rondkomen_cat), color = "white", linewidth = 0.2) +
   scale_fill_manual(
