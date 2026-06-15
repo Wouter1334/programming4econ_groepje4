@@ -62,6 +62,7 @@ Preferably from a URL, but if not, make sure to download the data and store it i
 
 midwest is an example dataset included in the tidyverse package
 
+Grafiek 1:
 ```{r}
 library(readxl)
 gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
@@ -86,29 +87,42 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
 
 ```
 
-
-
+Grafiek 4:
 ```{r}
-library(dplyr)
-library(ggplot2)
-
 moeite_per_jaar <- moeiteRondkomenAlleJaren %>%
   mutate(Jaar = as.numeric(substr(Perioden, 1, 4))) %>%
   group_by(Jaar) %>%
-  summarise(
-    gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)
+  summarise(gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)) %>%
+  arrange(Jaar) %>%
+  mutate(
+    procentuele_verandering =
+      (gem_moeite - lag(gem_moeite)) / lag(gem_moeite) * 100
   )
 
-ggplot(moeite_per_jaar, aes(x = Jaar, y = gem_moeite)) +
+ggplot(moeite_per_jaar,
+       aes(x = Jaar, y = procentuele_verandering)) +
   geom_line() +
   geom_point() +
+  geom_vline(xintercept = 2020, linetype = "dashed") +
+  annotate("text",
+           x = 2020,
+           y = 20,
+           label = "COVID-19 pandemie",
+           angle = 90,
+           vjust = -0.5) +
+  scale_x_continuous(
+    breaks = seq(min(moeite_per_jaar$Jaar),
+                 max(moeite_per_jaar$Jaar),
+                 by = 1)
+  ) +
   labs(
-    title = "Gemiddelde moeite met rondkomen per jaar",
+    title = "Procentuele verandering moeite met rondkomen",
     x = "Jaar",
-    y = "Moeite met rondkomen"
+    y = "Verandering (%)"
   ) +
   theme_minimal()
 ```
+
 
 ```{r}
 library(readr)
