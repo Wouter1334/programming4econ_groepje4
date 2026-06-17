@@ -357,7 +357,6 @@ Here you provide a description of why the plot above is relevant to your specifi
 
 ## 3.5 Visualize sub-population variation
 
-
 ## 3.6 Event analysis
 
 Analyze the relationship between two variables.
