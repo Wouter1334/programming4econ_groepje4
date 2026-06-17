@@ -174,7 +174,6 @@ library(dplyr)
 library(ggplot2)
 library(readr)
 library(cbsodataR)
-library(leaflet)
 
 wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
 
@@ -241,6 +240,72 @@ ggplot(ams_joined) +
 
 ```
 
+```{r}
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+ams <- wijken %>% filter(grepl("^WK0363", statcode))
+
+leeftijd_raw <- read_delim("data/Leeftijdsgroepen_wijken_buurten_Amsterdam_2023.csv",
+  delim = ";",
+  locale = locale(decimal_mark = ".")
+)
+
+leeftijd_wijk <- leeftijd_raw %>%
+  rename(
+    wijknaam = `Wijken en buurten`,
+    inwoners = `Bevolking/Aantal inwoners (aantal)`,
+    leeftijd_15_25 = `Bevolking/Leeftijdsgroepen/15 tot 25 jaar (aantal)`
+  ) %>%
+  mutate(wijknaam = trimws(wijknaam)) %>%
+  distinct(wijknaam, .keep_all = TRUE) %>%
+  filter(inwoners > 0) %>%
+  mutate(perc_studenten = leeftijd_15_25 / inwoners * 100) %>%
+  select(wijknaam, perc_studenten)
+
+ams_joined <- ams %>%
+  left_join(leeftijd_wijk, by = c("statnaam" = "wijknaam"))
+
+breaks <- c(0, 8, 11, 13, 16, 20, 75)
+labels <- c("0 - 8", "8 - 11", "11 - 13", "13 - 16", "16 - 20", "20+")
+
+ams_joined <- ams_joined %>%
+  mutate(
+    studenten_cat = cut(
+      perc_studenten,
+      breaks = breaks,
+      labels = labels,
+      include.lowest = TRUE
+    )
+  )
+
+kleuren <- c("#e8f5e0", "#c2e3b3", "#94cc7a", "#5fab47", "#347a2c", "#0d4a14")
+
+ggplot(ams_joined) +
+  geom_sf(aes(fill = studenten_cat), color = "white", linewidth = 0.2) +
+  scale_fill_manual(
+    values = kleuren,
+    labels = labels,
+    na.value = "grey85",
+    name = "Percentage",
+    drop = FALSE
+  ) +
+  theme_void() +
+  labs(
+    title = "Jongvolwassenen in Amsterdam, 2023",
+    subtitle = "Percentage 15-25 jaar per wijk"
+  ) +
+  theme(
+    plot.title = element_text(face = "bold", size = 13, color = "#1a4a8a"),
+    plot.subtitle = element_text(size = 9, color = "#444444"),
+    legend.title = element_text(size = 9),
+    legend.text = element_text(size = 8),
+    legend.position = "left"
+  )
+```
 
 ```         
 
