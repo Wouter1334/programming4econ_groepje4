@@ -28,7 +28,7 @@ Nahar Singh 2860210
 
 Joran Heesemans 2864151
 
-Wouter Sanders
+Wouter Sanders 
 
 Romijn Bouw 2899615
 
@@ -79,9 +79,9 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
   geom_line() +
   geom_point() +
   labs(
-    title = "Gemiddelde huurprijs Amsterdam (alle wijken)",
-    x = "Jaar",
-    y = "Huurprijs (€)"
+    title = "Average Rent Price Amsterdam (All Districts)",
+    x = "Year",
+    y = "Rent Price (€)"
   ) +
   theme_minimal()
 ```
@@ -106,7 +106,7 @@ ggplot(moeite_per_jaar,
   annotate("text",
            x = 2020,
            y = 20,
-           label = "COVID-19 pandemie",
+           label = "COVID-19 Pandamic",
            angle = 90,
            vjust = -0.5) +
   scale_x_continuous(
@@ -115,9 +115,9 @@ ggplot(moeite_per_jaar,
                  by = 1)
   ) +
   labs(
-    title = "Procentuele verandering moeite met rondkomen",
-    x = "Jaar",
-    y = "Verandering (%)"
+    title = "Percentage Change in Financial Hardship",
+    x = "Year",
+    y = "Change (%)"
   ) +
   theme_minimal()
 ```
@@ -226,8 +226,8 @@ ggplot(ams_joined) +
   ) +
   theme_void() +
   labs(
-    title = "Moeite met rondkomen in Amsterdam, 2024",
-    subtitle = "Per wijk, 18 jaar of ouder"
+    title = "Financial Hardship in Amsterdam, 2024",
+    subtitle = "Per District, 18+"
   ) +
   theme(
     plot.title = element_text(face = "bold", size = 13, color = "#1a4a8a"),
@@ -258,7 +258,7 @@ leaflet(ams_joined) %>%
   addLegend(
     pal = kleurenpalet,
     values = ~MoeiteMetRondkomen_32,
-    title = "% moeite met rondkomen",
+    title = "% financial hardship",
     position = "bottomleft"
   )
 
