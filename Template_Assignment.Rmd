@@ -14,6 +14,8 @@ install.packages("rmarkdown")
 install.packages("ggplot2")
 install.packages("dplyr")
 install.packages(c("sf", "tmap" , "cbsodataR"))
+install.packages("tinytex")
+tinytex::install_tinytex()
 ```
 
 ```{r packages}
@@ -235,31 +237,6 @@ ggplot(ams_joined) +
     legend.title = element_text(size = 9),
     legend.text = element_text(size = 8),
     legend.position = "left"
-  )
-kleurenpalet <- colorNumeric(
-  palette = c("#fde0d0", "#f7b89c", "#f08060", "#d94f35", "#b81c1c", "#7a0000"),
-  domain = ams_joined$MoeiteMetRondkomen_32,
-  na.color = "#cccccc"
-)
-
-leaflet(ams_joined) %>%
-  addPolygons(
-    fillColor = ~kleurenpalet(MoeiteMetRondkomen_32),
-    fillOpacity = 0.8,
-    color = "white",
-    weight = 1,
-    label = ~paste0(statnaam, ": ", round(MoeiteMetRondkomen_32, 1), "%"),
-    labelOptions = labelOptions(
-      style = list("font-size" = "13px"),
-      textsize = "13px",
-      direction = "auto"
-    )
-  ) %>%
-  addLegend(
-    pal = kleurenpalet,
-    values = ~MoeiteMetRondkomen_32,
-    title = "% financial hardship",
-    position = "bottomleft"
   )
 
 ```
