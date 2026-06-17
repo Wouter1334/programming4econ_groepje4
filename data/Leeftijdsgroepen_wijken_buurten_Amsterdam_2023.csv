@@ -1,0 +1,634 @@
+﻿"Wijken en buurten";"Bevolking/Aantal inwoners (aantal)";"Bevolking/Leeftijdsgroepen/0 tot 15 jaar (aantal)";"Bevolking/Leeftijdsgroepen/15 tot 25 jaar (aantal)";"Bevolking/Leeftijdsgroepen/25 tot 45 jaar (aantal)";"Bevolking/Leeftijdsgroepen/45 tot 65 jaar (aantal)";"Bevolking/Leeftijdsgroepen/65 jaar of ouder (aantal)"
+"Amsterdam";918117;124270;120404;335216;215053;123174
+"Haarlemmerbuurt";9135;810;855;3055;2640;1775
+"Planciusbuurt-Noord";345;15;25;180;90;35
+"Westelijke eilanden";2910;290;260;910;870;585
+"Westerdokseiland";1825;210;140;515;550;410
+"Planciusbuurt-Zuid";165;10;10;65;55;30
+"Haarlemmerbuurt-West";2375;190;240;810;685;445
+"Haarlemmerbuurt-Oost";1515;95;180;575;400;270
+"Jordaan";19545;1445;2175;7280;5180;3460
+"Marnixbuurt-Noord";1455;125;135;540;405;260
+"Driehoekbuurt";2725;215;295;1065;695;450
+"Anjeliersbuurt-Noord";2095;155;250;675;630;380
+"Zaagpoortbuurt";915;50;115;450;215;85
+"Anjeliersbuurt-Zuid";2915;225;305;905;905;575
+"Marnixbuurt-Midden";215;15;25;125;30;15
+"Bloemgrachtbuurt";2980;245;365;1135;750;485
+"Groenmarktkadebuurt";310;10;80;155;35;25
+"Marnixbuurt-Zuid";700;30;45;280;145;195
+"Elandsgrachtbuurt";4325;320;470;1590;1135;810
+"Passeerdersgrachtbuurt";915;50;100;355;240;180
+"Grachtengordel-West";6585;460;920;2440;1665;1105
+"Langestraat e.o.";1895;160;240;610;500;395
+"Leliegracht e.o.";1870;120;310;720;450;265
+"Felix Meritisbuurt";2075;120;260;825;545;320
+"Leidsegracht-Noord";740;50;105;285;175;120
+"Burgwallen-Nieuwe Zijde";4335;160;800;2240;795;345
+"Stationsplein e.o.";5;0;0;0;0;0
+"Hemelrijk";565;20;110;275;135;35
+"Nieuwendijk-Noord";505;20;95;270;95;25
+"Spuistraat-Noord";890;30;175;470;145;70
+"Nieuwe Kerk e.o.";790;40;155;405;145;45
+"Spuistraat-Zuid";785;35;125;405;145;85
+"Begijnhofbuurt";460;5;70;230;75;75
+"Kalverdriehoek";335;15;80;175;50;20
+"Burgwallen-Oude Zijde";4565;195;830;2160;925;465
+"Kop Zeedijk";1155;50;155;570;280;105
+"Oude Kerk e.o.";740;25;180;345;120;70
+"Burgwallen-Oost";1600;75;295;760;300;170
+"Nes e.o.";375;15;70;185;80;30
+"BG-terrein e.o.";695;30;135;300;150;90
+"Nieuwmarkt/Lastage";9910;700;1300;3410;2540;1965
+"Oosterdokseiland";505;55;25;230;135;55
+"Lastage";1100;75;130;430;295;170
+"Scheepvaarthuisbuurt";745;55;150;270;170;105
+"Rapenburg";995;85;230;345;225;115
+"Nieuwmarkt";1585;105;165;405;430;475
+"Uilenburg";1245;80;140;455;350;220
+"Valkenburg";1200;85;170;380;275;290
+"Zuiderkerkbuurt";1630;95;185;575;430;345
+"Waterloopleinbuurt";895;60;105;325;225;180
+"Grachtengordel-Zuid";5865;420;865;2380;1390;800
+"Leidsegracht-Zuid";700;50;85;295;165;110
+"Geelvinckbuurt";345;20;80;180;40;20
+"Rembrandtplein e.o.";1025;60;160;590;160;55
+"Spiegelbuurt";835;65;125;300;240;105
+"Vijzelstraatbuurt";1410;95;195;495;360;265
+"Amstelveldbuurt";1550;140;220;510;430;250
+"De Weteringschans";7555;590;1045;3215;1700;1005
+"Leidsebuurt-Noordwest";285;10;40;170;45;15
+"Leidsebuurt-Noordoost";1110;45;260;570;165;65
+"Weteringbuurt";2400;220;305;1055;530;295
+"Utrechtsebuurt-Zuid";1220;95;135;445;330;215
+"Leidsebuurt-Zuidwest";160;5;30;75;35;20
+"Leidsebuurt-Zuidoost";300;30;30;120;70;45
+"Den Texbuurt";1110;110;145;415;255;190
+"Frederikspleinbuurt";970;75;95;370;265;150
+"Weesperbuurt/Plantage";7835;600;1205;2920;1710;1400
+"Weesperbuurt";3060;190;500;1120;640;615
+"Plantage";2385;195;300;830;540;515
+"Sarphatistrook";1995;175;355;795;440;230
+"Alexanderplein e.o.";390;45;50;170;90;40
+"Oostelijke Eilanden/Kadijken";14670;1320;1600;5535;3790;2420
+"Marine-Etablissement";110;10;15;30;35;15
+"Kattenburg";1670;160;340;430;350;385
+"Wittenburg";2525;205;160;930;805;415
+"Oostenburg";2900;210;270;1610;530;280
+"Czaar Peterbuurt";2320;220;280;1010;555;260
+"Het Funen";1295;230;150;350;420;145
+"Kadijken";2905;220;305;830;870;680
+"Kazernebuurt";940;55;75;345;225;235
+"Havens-West";35;0;0;15;5;5
+"Afrikahaven";5;0;5;0;5;0
+"Amerikahaven";5;0;0;5;0;0
+"Westhaven-Noord";15;5;5;10;5;5
+"Petroleumhaven";0;0;0;0;0;5
+"Vervoerscentrum";0;0;0;0;0;0
+"Westhaven-Zuid";10;0;5;5;0;5
+"Coenhaven/Minervahaven";975;0;725;230;25;0
+"Coenhaven";175;0;45;105;15;0
+"Vlothaven";0;0;0;0;0;0
+"Minervahaven-Noordoost";785;0;675;105;5;0
+"Minervahaven-Noordwest";5;0;0;5;0;0
+"Minervahaven-Zuidwest";0;0;0;0;0;0
+"Minervahaven-Zuidoost";20;0;0;15;5;0
+"Alfa-driehoek";0;0;0;0;0;0
+"Hemknoop-Noord";0;0;0;0;0;0
+"Sloterdijk-West";660;65;25;425;115;35
+"Isolatorbuurt";60;0;0;25;30;5
+"Contactbuurt";15;5;0;10;0;0
+"Woon- en Groengebied Sloterdijk";580;60;25;385;80;35
+"Spaarndammerbuurt/Zeeheldenbuurt";10815;1305;935;4235;2865;1480
+"Hemknoop-Zuid";0;0;0;0;0;0
+"Overbraker Binnenpolder";5;0;0;0;5;0
+"Zaanstraat emplacement";0;0;0;0;0;0
+"Spaarndammerbuurt-Noordwest";1920;245;130;810;525;205
+"Spaarndammerbuurt-Midden";1460;215;125;625;400;105
+"Spaarndammerbuurt-Zuidwest";1800;190;155;725;360;370
+"Spaarndammerbuurt-Noordoost";2645;290;215;970;785;390
+"Zeeheldenbuurt";1955;265;210;705;530;250
+"Westergasfabriek";0;5;0;5;0;0
+"Spaarndammerbuurt-Zuidoost";1020;110;95;395;260;155
+"Houthavens";4660;870;280;1850;1195;465
+"Houthavens-West";4015;830;225;1690;940;330
+"Houthavens-Oost";645;35;50;160;250;145
+"De Kolenkit";11770;1890;1845;4980;2085;975
+"Kolenkitbuurt-Noord";4805;940;675;1880;980;320
+"Kolenkitbuurt-Zuid";2170;340;245;945;420;215
+"Laan van Spartaan";2800;450;605;1225;350;165
+"Robert Scottbuurt-West";2000;160;315;925;330;270
+"Landlust";18640;2475;2245;8270;4065;1585
+"Bosleeuw";5485;755;835;2145;1240;505
+"Gibraltarbuurt";4185;510;440;1940;935;360
+"Bedrijventerrein Landlust";585;40;40;425;50;30
+"Landlust-Noord";2410;350;305;1090;475;190
+"Erasmusparkbuurt-Oost";1865;270;230;730;470;160
+"Landlust-Zuid";4125;540;395;1940;890;345
+"Erasmuspark";5740;590;655;2880;1145;470
+"Robert Scottbuurt-Oost";1750;170;235;825;360;165
+"Erasmusparkbuurt-West";3995;420;420;2060;790;300
+"Centrale Markt";2340;245;255;740;750;350
+"Bedrijvencentrum Westerkwartier";60;5;10;10;25;5
+"GWL-terrein";1235;145;170;275;475;170
+"Markthallen";15;5;0;5;0;5
+"Marcanti";1030;95;75;445;245;170
+"Staatsliedenbuurt";12970;1230;1240;5475;3530;1500
+"Westerstaatsman";2785;245;265;1410;690;160
+"Fannius Scholtenbuurt";3635;355;315;1630;1025;315
+"Staatsliedenbuurt-Noordoost";1195;100;95;350;325;325
+"De Wittenbuurt-Noord";1355;145;115;560;370;170
+"De Wittenbuurt-Zuid";815;60;80;215;265;200
+"Buyskade e.o.";3190;315;365;1310;860;330
+"Frederik Hendrikbuurt";8200;675;730;3660;1980;1150
+"Frederik Hendrikbuurt-Noord";3820;350;390;1735;865;480
+"Frederik Hendrikbuurt-Zuidwest";1190;80;90;350;360;320
+"Frederik Hendrikbuurt-Zuidoost";3185;245;255;1575;755;350
+"Van Galenbuurt";7910;805;895;3525;2070;605
+"Mercatorpark";2500;250;300;1090;830;30
+"Orteliusbuurt-Noord";1330;135;130;630;270;160
+"Jan Maijenbuurt";2230;225;270;960;555;220
+"John Franklinbuurt";1845;200;200;845;415;190
+"Geuzenbuurt";6625;720;790;3195;1310;600
+"Pieter van der Doesbuurt";1835;215;235;770;435;175
+"Trompbuurt";3130;380;380;1490;585;295
+"Geuzenhofbuurt";1660;125;180;940;290;130
+"Hoofdweg e.o.";10150;1075;1205;4590;2265;1015
+"Orteliusbuurt-Midden";1895;205;190;905;425;170
+"Balboaplein e.o.";2970;315;425;1315;675;240
+"Orteliusbuurt-Zuid";1865;145;210;895;360;260
+"Columbusplein e.o.";3415;415;380;1470;805;350
+"Chassébuurt";6060;780;800;2420;1455;605
+"Filips van Almondekwartier";1105;120;130;530;240;85
+"Kortenaerkwartier";2220;265;330;850;550;225
+"Van Brakelkwartier";990;155;125;345;250;110
+"De Wester Quartier";1750;240;210;695;415;185
+"Bellamybuurt";6375;690;630;3110;1340;605
+"Bellamybuurt-Noord";2400;265;235;1100;535;265
+"Bellamybuurt-Zuid";3980;420;395;2015;805;345
+"Da Costabuurt";4740;400;505;2180;1025;625
+"Da Costabuurt-Noord";4740;400;510;2180;1025;625
+"Westindische Buurt";6685;790;690;3265;1305;640
+"Postjeskade e.o.";2990;325;315;1430;590;330
+"Paramariboplein e.o.";3705;465;375;1840;715;310
+"Van Lennepbuurt";6890;600;685;2865;1660;1080
+"Lootsbuurt";1865;170;175;850;465;205
+"Borgerbuurt";2790;270;255;845;740;680
+"Da Costabuurt-Zuid";2235;160;260;1170;460;190
+"Overtoomse Sluis";7945;770;760;3900;1690;820
+"Cremerbuurt-West";5690;545;525;2920;1195;515
+"Vondelparkbuurt-West";2250;230;240;980;495;305
+"Helmersbuurt";7495;755;850;3165;1800;930
+"Cremerbuurt-Oost";2335;245;255;1115;545;170
+"WG-terrein";2630;240;235;930;710;510
+"Helmersbuurt-Oost";2535;270;360;1120;540;240
+"Vondelparkbuurt";1865;175;270;630;500;290
+"Vondelparkbuurt-Midden";860;95;125;260;240;140
+"Vondelparkbuurt-Oost";1005;80;145;370;255;155
+"Sloterdijk Nieuw-West";1185;65;440;560;100;15
+"Sloterdijk De Heining";30;5;0;5;5;5
+"Sloterdijk Poort-Noord";15;0;0;0;15;0
+"Sloterdijk Poort-Zuid";115;5;65;35;15;5
+"Sloterdijk Rhônepark";0;0;5;0;0;0
+"Sloterdijk Donauhoek";10;0;0;10;0;0
+"Bretten-West";0;0;0;0;0;0
+"Bretten-Oost";0;0;0;0;0;0
+"Sloterdijk Stationskwartier";1010;60;375;500;65;5
+"Geuzenveld";18960;4040;2535;5860;4240;2285
+"Osdorper Binnenpolder";25;0;5;5;10;10
+"De Eendracht";2425;470;250;630;635;450
+"Ruys de Beerenbrouckbuurt";6105;1330;830;1865;1380;700
+"Eendrachtspark";295;35;35;120;85;20
+"Van Tijenbuurt";2910;670;435;860;575;365
+"Dudokbuurt";2755;645;375;965;550;225
+"Bakemabuurt";2920;590;430;1015;620;265
+"Wegener Sleeswijkbuurt";1520;290;185;400;390;250
+"Slotermeer-West";10705;1950;1635;3430;2445;1240
+"Jan de Louterbuurt";3435;540;480;1170;775;475
+"Lodewijk van Deysselbuurt";3440;660;530;1050;830;360
+"Confuciusbuurt";3830;750;625;1210;845;410
+"Slotermeer-Noordoost";9205;1800;1240;2975;2220;965
+"Arondeusbuurt";2795;660;395;860;615;260
+"Coronelbuurt";1510;255;220;505;380;140
+"Meerwaldtbuurt";1985;340;245;610;510;280
+"Dobbebuurt";2910;540;380;995;710;280
+"Slotermeer-Zuidoost";6755;1080;920;2445;1490;830
+"Dichtersbuurt";1050;125;90;370;250;210
+"Louis Couperusbuurt";2330;410;355;860;470;230
+"Noordoever Sloterplas";3385;545;470;1210;770;385
+"Sloterpark";0;0;0;0;0;0
+"Lutkemeer/Ookmeer";1250;155;170;415;325;190
+"Osdorper Bovenpolder";760;100;80;180;235;170
+"Ookmeer";420;50;70;225;65;10
+"Bedrijvenpark Lutkemeer";70;10;15;15;25;10
+"De Aker";14435;2485;2100;3600;4220;2040
+"Middelveldsche Akerpolder";4000;860;430;1095;910;700
+"De Aker-West";4570;700;655;1155;1420;640
+"De Aker-Oost";5865;920;1010;1350;1890;700
+"De Punt";6330;1085;990;2065;1380;815
+"Bedrijvencentrum Osdorp";115;0;0;35;65;10
+"Dijkgraafpleinbuurt";6210;1085;990;2025;1310;800
+"Osdorp-Midden";15480;2885;2255;5025;3435;1880
+"Reimerswaal";2800;520;350;765;600;565
+"Botteskerkbuurt";3410;755;465;1080;730;375
+"Zuidwestkwadrant-Noord";3100;565;480;1000;615;435
+"Zuidwestkwadrant-Zuid";6175;1040;970;2170;1490;505
+"Osdorp-Oost";17645;2770;2425;5685;3730;3035
+"Wildeman";4845;890;575;1360;1135;890
+"Meer en Oever";3195;445;345;1070;745;600
+"Osdorpplein e.o.";4270;720;695;1720;695;440
+"Calandlaan/Lelylaan";1245;180;110;335;370;250
+"Osdorp-Zuidoost";4080;535;700;1200;785;860
+"Slotervaart-Noord";7805;1410;1045;2090;1985;1275
+"Oostoever Sloterplas";2440;305;300;500;735;600
+"Emanuel van Meterenbuurt";2255;445;285;595;530;405
+"Jacob Geelbuurt";3115;660;460;1000;725;270
+"Overtoomse Veld";14670;2215;2820;6120;2420;1095
+"Lucas/Andreasziekenhuis e.o.";1245;20;705;495;20;5
+"Overtoomse Veld-Noord";6030;1145;840;2230;1260;550
+"Rembrandtpark-Noord";1015;70;395;400;85;65
+"Overtoomse Veld-Zuid";4545;670;635;2195;695;345
+"Rembrandtpark-Zuid";880;85;70;525;125;80
+"Johan Jongkindbuurt";955;225;165;280;230;50
+"Slotervaart-Zuid";11085;1785;1945;3825;2055;1475
+"Louis Crispijnbuurt";3240;505;540;890;675;625
+"Jacques Veldmanbuurt";3760;530;630;1535;645;420
+"Medisch Centrum Slotervaart";775;40;355;270;55;50
+"Staalmanbuurt";3315;700;425;1130;680;375
+"Westlandgracht";13195;1285;2875;6430;1780;830
+"Schipluidenbuurt";1635;75;445;1025;65;20
+"Koningin Wilhelminaplein";2975;250;230;1940;370;185
+"Andreasterrein";1275;225;155;405;325;150
+"Delflandpleinbuurt-West";4740;490;1155;2130;630;330
+"Delflandpleinbuurt-Oost";2130;235;660;705;385;140
+"Riekerhaven";450;10;225;220;0;0
+"Sloten/Nieuw-Sloten";14720;2180;1625;4090;4240;2580
+"Dorp Sloten";720;95;80;160;240;145
+"Nieuw-Sloten-Noordwest";3055;495;350;765;910;535
+"Nieuw-Sloten-Noordoost";3170;480;325;805;860;700
+"Nieuw-Sloten-Zuidwest";2220;320;300;470;820;305
+"Belgiëplein e.o.";1165;95;115;325;275;360
+"Nieuw-Sloten-Zuidoost";2185;425;250;680;595;240
+"Sloterweg e.o.";335;70;40;75;85;60
+"Park Haagseweg";995;140;80;225;330;215
+"Riekerpolder";705;40;65;550;40;5
+"Nieuwe Meer";165;20;25;35;75;15
+"Hoofddorppleinbuurt";11765;1320;1220;5460;2530;1230
+"Westlandgrachtbuurt";3625;425;330;1725;760;385
+"Surinamepleinbuurt";1535;205;150;670;320;195
+"Legmeerpleinbuurt";1645;205;160;695;380;200
+"Aalsmeerwegbuurt-West";2530;280;235;1315;500;205
+"Aalsmeerwegbuurt-Oost";2165;200;225;990;515;235
+"Bedrijventerrein Schinkel";270;5;120;75;45;15
+"Schinkelbuurt";3930;315;445;1840;885;450
+"Schinkelbuurt-Noord";2455;190;285;1210;545;220
+"Schinkelbuurt-Zuid";1480;130;160;625;340;230
+"Willemspark";5560;920;630;1695;1540;775
+"Vondelpark-West";0;0;0;0;0;0
+"Willemsparkbuurt-Noord";1550;200;225;470;445;205
+"Valeriusbuurt-West";2615;450;240;890;660;380
+"Valeriusbuurt-Oost";1400;270;160;335;435;190
+"Museumkwartier";12640;1665;1405;3800;3285;2485
+"Vondelpark-Oost";0;0;0;0;0;5
+"Cornelis Schuytbuurt";2960;505;380;805;840;440
+"Concertgebouwbuurt";1865;280;235;535;520;290
+"P.C. Hooftbuurt";770;80;75;265;225;130
+"Museumplein";10;0;0;0;0;5
+"Banpleinbuurt";765;95;115;130;230;200
+"Hondecoeterbuurt";2060;300;225;670;495;365
+"Johannes Vermeerbuurt";1495;190;150;495;400;270
+"Duivelseiland";1380;125;135;695;300;130
+"Harmoniehofbuurt";1335;90;90;205;290;660
+"Oude Pijp";14865;1090;1970;7200;3105;1500
+"Frans Halsbuurt";2580;185;325;1230;580;260
+"Gerard Doubuurt";2035;145;240;980;430;240
+"Hercules Seghersbuurt";2535;170;320;1260;505;270
+"Sarphatiparkbuurt";5090;320;770;2495;1005;500
+"Hemonybuurt";2625;260;315;1235;590;225
+"Nieuwe Pijp";12570;1010;1375;5860;2700;1625
+"Cornelis Troostbuurt";3610;305;395;1725;740;445
+"Lizzy Ansinghbuurt";2385;185;240;1030;560;375
+"Van der Helstpleinbuurt";3920;335;395;1985;830;370
+"Willibrordusbuurt";2650;185;345;1120;565;440
+"Zuid Pijp";7920;845;870;2715;2075;1415
+"BurgemeesterTellegenbuurt-West";2155;240;205;720;560;430
+"Burgemeester Tellegenbuurt-Oost";2700;255;300;955;730;460
+"Diamantbuurt";3065;350;365;1030;790;525
+"Stadionbuurt";11770;1500;1130;4405;2855;1875
+"Bertelmanpleinbuurt";1030;90;105;340;275;225
+"Olympisch Stadion e.o.";2365;440;180;860;530;365
+"Marathonbuurt-West";2370;235;225;825;655;430
+"Marathonbuurt-Oost";1460;155;155;435;420;295
+"Van Tuyllbuurt";4155;515;415;1885;830;510
+"IJsbaanpad e.o.";385;70;55;60;145;60
+"Apollobuurt";8825;1635;1040;2205;2375;1565
+"Hiltonbuurt";75;15;15;5;35;10
+"Minervabuurt-Noord";1450;290;170;305;435;255
+"Minervabuurt-Midden";2510;470;290;650;650;450
+"Minervabuurt-Zuid";2620;450;250;785;655;485
+"Beethovenbuurt";1365;235;195;325;370;230
+"Diepenbrockbuurt";800;170;120;135;240;135
+"Scheldebuurt";15000;1930;1560;6255;2975;2275
+"Wielingenbuurt";2900;370;310;1155;620;445
+"Scheldebuurt-West";4305;555;505;1740;865;640
+"Scheldebuurt-Midden";3150;430;335;1345;595;450
+"Scheldebuurt-Oost";2390;295;305;1055;455;285
+"Veluwebuurt";1510;185;75;520;355;370
+"Kop Zuidas";745;100;30;435;90;85
+"IJselbuurt";5225;505;630;2260;1100;735
+"IJselbuurt-West";2340;195;240;1010;535;360
+"IJselbuurt-Oost";2885;310;385;1250;565;380
+"Rijnbuurt";8985;865;1010;3790;1970;1355
+"Kromme Mijdrechtbuurt";2410;190;270;1025;555;370
+"Rijnbuurt-West";1660;195;140;495;470;365
+"Rijnbuurt-Midden";2190;225;225;1060;395;285
+"Rijnbuurt-Oost";2685;245;370;1200;540;320
+"Zorgvlied";45;5;5;10;15;10
+"Prinses Irenebuurt e.o.";1400;240;150;340;350;315
+"Prinses Irenebuurt";1400;240;155;340;350;315
+"Beatrixpark";0;0;0;0;0;0
+"Zuidas";5225;565;790;2920;745;200
+"Zuidas-Noord";545;65;35;360;60;25
+"RAI";0;0;0;0;0;0
+"VU-kwartier";180;35;10;100;25;10
+"Zuidas-Zuid";2725;340;180;1615;460;125
+"Vivaldi";1775;130;560;845;195;45
+"Buitenveldert-West";14040;1860;1570;4605;2930;3080
+"Amsterdamse Bos";65;5;5;10;20;20
+"Zuiderhof";35;5;10;15;0;0
+"Buitenveldert-West-Midden";1030;145;120;175;275;305
+"Gelderlandpleinbuurt";4715;520;540;1690;885;1085
+"Buitenveldert-Zuidwest";4250;590;375;1180;925;1180
+"Buitenveldert-Zuid-Midden";3945;595;520;1525;820;490
+"Buitenveldert-Oost";8305;1060;825;2820;1595;2005
+"De Klenckebuurt";795;90;25;270;130;275
+"Buitenveldert-Oost-Midden";3435;470;290;1170;665;840
+"Buitenveldert-Zuidoost";4065;495;510;1370;800;885
+"Amstelpark";15;0;5;5;0;0
+"Oostelijk Havengebied";20575;2535;2075;6950;6495;2515
+"Java-eiland";3315;345;355;955;1130;525
+"KNSM-eiland";2315;210;170;580;865;485
+"Oostelijke Handelskade";1445;185;105;650;380;120
+"Rietlanden";2425;285;240;880;705;305
+"Sporenburg";2725;420;370;655;1070;210
+"Borneo";2775;495;335;765;950;225
+"Entrepot-Noordwest";1425;170;145;445;440;225
+"Bedrijvengebied Veelaan";40;5;0;5;15;10
+"Architectenbuurt";1705;155;135;550;560;305
+"Cruquiusbuurt";2160;235;170;1355;335;70
+"Bedrijvengebied Zeeburgerkade";240;30;45;100;40;30
+"Weesperzijde";5895;600;975;2605;1145;570
+"Weesperzijde-Noord";1955;190;235;945;420;170
+"Weesperzijde-Midden/Zuid";3275;360;320;1530;675;390
+"Parooldriehoek";665;50;420;135;55;5
+"Oosterparkbuurt";10690;1175;1140;4475;2500;1405
+"Oosterparkbuurt-Noordwest";3780;335;410;1725;840;475
+"Oosterpark";130;5;15;65;35;15
+"Oosterparkbuurt-Zuidwest";3070;390;320;1215;720;420
+"Oosterparkbuurt-Zuidoost";3700;445;390;1465;910;495
+"Transvaalbuurt";8875;1075;1090;3530;2065;1115
+"Transvaalbuurt-West";3970;440;450;1535;980;560
+"Transvaalbuurt-Oost";4905;635;640;1995;1085;555
+"Dapperbuurt";10000;1100;1135;3865;2365;1525
+"Dapperbuurt-Noord";4250;425;475;1720;940;690
+"Dapperbuurt-Zuid";3740;340;480;1505;935;485
+"Oostpoort";2005;335;180;645;495;350
+"Indische Buurt-West";12270;1400;1595;5230;2740;1305
+"Timorpleinbuurt-Noord";3920;440;455;1850;870;305
+"Timorpleinbuurt-Zuid";4490;465;660;2000;960;415
+"Ambonpleinbuurt";3860;495;485;1385;905;585
+"Indische Buurt-Oost";9815;1255;1155;3440;2440;1525
+"Makassarpleinbuurt";5610;670;650;1915;1375;1005
+"Zeeburgerdijk-Oost";430;50;45;120;145;70
+"Sumatraplantsoenbuurt";3755;535;460;1395;915;445
+"Flevopark";20;0;5;5;5;0
+"Zeeburgereiland/Bovendiep";5675;805;1265;2585;775;245
+"Sluisbuurt";15;5;0;5;5;5
+"Sportheldenbuurt";4595;775;630;2285;700;215
+"Oostpunt Zeeburgereiland";45;5;0;5;20;5
+"Baaibuurt-West";265;15;130;95;20;5
+"Baaibuurt-Oost";685;5;495;180;5;0
+"Bovendiep/Diemerpark";65;10;10;15;25;15
+"IJburg-West";16310;3150;2575;5000;4625;955
+"Steigereiland-Zuid";2625;545;490;555;895;135
+"Steigereiland-Noord";2200;395;260;980;495;80
+"Rieteilanden-West";2750;510;530;515;1005;185
+"Joris Ivenspleinbuurt";2840;470;385;1095;655;230
+"Ed Pelsterparkbuurt";5900;1235;915;1850;1575;320
+"IJburg-Oost";620;170;75;215;140;20
+"Buiteneiland";0;0;0;0;0;0
+"Pampusbuurt-West";0;0;0;0;0;0
+"Pampusbuurt-Oost";0;0;0;0;0;0
+"Centrumeiland";620;170;75;215;145;20
+"Muidenbuurt-West";0;0;0;0;0;0
+"IJburg-Zuid";8210;2090;1155;2390;2210;370
+"Havenkwartier IJburg";1830;370;225;705;380;150
+"Theo van Goghparkbuurt";6055;1625;875;1650;1685;215
+"Rieteiland-Oost";330;95;55;35;140;0
+"Frankendael";12570;1615;1635;4760;2740;1820
+"Van der Kunbuurt";625;110;85;230;130;75
+"De Eenhoorn";3295;230;795;1740;430;100
+"Don Bosco";2155;345;245;730;525;310
+"Julianapark";1050;105;55;580;170;140
+"Frankendael";15;5;0;5;5;0
+"Tuindorp Amstelstation";830;135;80;175;235;205
+"De Wetbuurt";1820;285;190;390;540;415
+"Tuindorp Frankendael";2770;400;185;915;705;570
+"Middenmeer";15700;2275;3005;4970;3510;1940
+"Linnaeusparkbuurt";2650;430;300;890;650;380
+"Middenmeer-Noord";2860;530;350;805;760;420
+"Middenmeer-Zuid";5070;920;660;1660;1215;610
+"Science Park-Noord";2670;135;1285;920;265;65
+"Science Park-Zuid";310;20;110;160;10;5
+"Sportpark Middenmeer-Zuid";310;35;15;50;60;145
+"Sportpark Middenmeer-Noord";275;10;110;150;0;0
+"Park de Meer";1565;200;175;330;545;315
+"Sportpark Voorland";0;0;0;0;0;0
+"Betondorp";3085;395;260;840;865;720
+"Drieburg";0;0;0;0;0;0
+"Nieuwe Oosterbegraafplaats";5;0;0;0;5;0
+"Betondorp";3075;395;260;840;860;715
+"Omval/Overamstel";5555;480;750;3295;725;305
+"De Omval";720;55;45;330;155;135
+"Overamstel";50;5;5;20;25;0
+"Amstelglorie";75;10;10;15;30;15
+"Amstelkwartier-West";900;25;225;605;20;25
+"Amstelkwartier-Noord";2775;300;335;1675;370;95
+"Amstelkwartier-Zuid";75;0;10;40;10;5
+"Weespertrekvaart";970;80;120;615;120;25
+"Oostzanerwerf";8870;1585;1085;2290;2520;1400
+"Noorder IJplas";140;15;20;10;55;45
+"Melkweg/Oostzanerwerf";80;5;10;15;40;15
+"Walvisbuurt";1360;240;155;350;430;185
+"Twiske-West";2535;460;310;575;815;380
+"Oostzanerdijk";350;70;30;100;100;50
+"Circus/Kermisbuurt";1335;190;125;445;395;180
+"Molenwijk";3065;605;440;790;685;545
+"Noordelijke IJ-oevers-West";9415;920;1200;5355;1440;505
+"Cornelis Douwesterrein-West";0;0;0;0;0;0
+"Cornelis Douwesterrein-Oost";0;0;0;0;0;0
+"NDSM terrein";3280;115;640;2325;175;25
+"Buiksloterham-Zuid";1375;220;95;750;245;70
+"Buiksloterham-Noord";1405;315;115;555;355;65
+"Klaprozenbuurt";130;15;15;40;35;20
+"Overhoeks";3225;255;330;1690;620;335
+"Tuindorp Oostzaan";12045;2250;1185;3425;3120;2060
+"Tuindorp Oostzaan-West";1135;175;95;220;265;385
+"Tuindorp Oostzaan-Oost";4180;700;400;1090;1170;815
+"Terrasdorp";4045;560;370;1250;1095;770
+"De Bongerd";2690;815;325;865;590;90
+"Kadoelen";3565;785;375;835;1010;565
+"Twiske-Oost";1090;170;125;230;315;240
+"Kadoelen";2475;610;250;605;695;320
+"Banne Buiksloot";14805;2765;1980;4185;3510;2360
+"Banne-Noordwest";2650;480;410;790;625;345
+"Banne-Noordoost";3555;665;520;950;875;550
+"Banne-Zuidwest";3795;730;610;925;845;685
+"Banne-Zuidoost";4165;780;355;1355;985;685
+"Buiksloterbreek";310;50;30;65;90;75
+"Marjoleinterrein";325;65;50;105;85;20
+"Nieuwendammerdijk/Buiksloterdijk";1705;375;200;335;515;280
+"Buiksloterdijk-West";175;45;20;25;45;30
+"Buiksloterdijk-Oost";135;25;10;30;35;35
+"Nieuwendammerdijk-West";1040;215;130;195;325;170
+"Nieuwendammerdijk-Oost";355;90;35;85;105;45
+"Nieuwendammerdijk-Zuid";0;0;0;0;0;0
+"Elzenhagen";5260;985;960;2120;855;345
+"Elzenhagen-Noord";3595;835;600;1255;665;240
+"Elzenhagen-Zuid";1540;115;350;840;165;75
+"Nintemanterrein";125;40;10;25;30;30
+"Buikslotermeer";11785;1550;1800;3515;2450;2475
+"Buikslotermeer-Noord";2500;215;540;695;430;615
+"De Kleine Wereld";2600;445;400;610;615;520
+"Loenermark";1920;160;235;800;315;410
+"Buikslotermeerplein";1365;170;120;385;270;430
+"Plan van Gool";3165;535;490;970;760;415
+"Rode Kruisbuurt";235;30;15;45;60;85
+"Waterlandpleinbuurt";13940;2960;1935;4240;3210;1590
+"Markengouw-Noord";600;50;80;220;120;135
+"Markengouw-Midden";4080;1040;640;1250;865;285
+"Markengouw-Zuid";2315;670;325;665;495;155
+"Werengouw-Noord";460;35;35;145;100;145
+"Werengouw-Midden";4905;795;620;1620;1210;665
+"Werengouw-Zuid";1575;375;235;340;430;210
+"Volewijck";9365;1530;960;3020;2595;1260
+"Bloemenbuurt-Noord";2435;400;195;750;665;420
+"Bloemenbuurt-Zuid";2350;415;240;695;625;370
+"Van der Pekbuurt";4585;710;530;1575;1300;470
+"IJplein/Vogelbuurt";7945;1120;915;2725;2125;1065
+"Vogelbuurt-Noord";1100;175;100;410;280;140
+"Vliegenbos";170;25;25;35;65;15
+"Vogelbuurt-Zuid";4205;615;555;1450;1075;510
+"IJplein e.o.";2475;300;230;825;700;405
+"Tuindorp Buiksloot";1910;315;185;530;515;365
+"Blauwe Zand";1910;315;185;535;510;365
+"Tuindorp Nieuwendam";3465;555;290;800;1020;805
+"Tuindorp Nieuwendam-West";1050;150;80;240;280;300
+"Tuindorp Nieuwendam-Oost";2415;405;210;560;740;505
+"Noordelijke IJ-oevers-Oost";400;30;90;180;80;20
+"Hamerstraatkwartier-West";365;20;90;170;70;15
+"Hamerstraatkwartier-Oost";10;0;0;0;5;0
+"Bedrijventerrein Nieuwendammerdijk";25;5;0;5;5;0
+"Waterland";2410;420;275;440;795;480
+"Noorderstrook-West";70;5;0;35;30;5
+"Noorderstrook-Oost";5;0;0;0;0;0
+"Zunderdorp";480;70;55;100;150;110
+"Schellingwoude-West";65;10;5;5;35;15
+"Schellingwoude-Oost";630;130;75;125;195;110
+"Schellingwoude-Noord";5;0;0;0;0;5
+"Zwarte Gouw";25;0;5;10;5;0
+"Holysloot";285;50;40;45;95;60
+"Ransdorp";320;55;30;50;105;80
+"Durgerdam";525;100;65;75;180;95
+"Driemond";1690;335;190;390;495;285
+"Landelijk gebied Driemond";150;40;25;25;50;10
+"Dorp Driemond";1540;295;165;360;445;270
+"Bloemendalerpolder";4150;1425;220;1615;710;175
+"Weespersluis-Noord";5;0;5;0;5;0
+"Waterrijk";105;35;0;55;10;0
+"Lanenrijk";2135;825;60;995;230;40
+"Vechtrijk";305;105;10;145;35;10
+"Leeuwenveld";1565;450;145;420;425;120
+"Bedrijventerrein Nijverheidslaan";35;5;5;5;15;5
+"Weesp-Noordwest";7930;1250;755;2285;2045;1595
+"Bedrijventerrein-Noord Weesp";125;10;5;55;40;15
+"Hogewey-Noord";1150;255;90;365;200;245
+"Hogewey-Midden";1820;290;175;455;490;410
+"Hogewey-Zuid";1910;270;215;315;540;565
+"Weesp Dichtersbuurt";1830;215;155;785;480;195
+"Weesp Schildersbuurt";1090;205;120;310;290;165
+"Weesp Binnenstad/Zuid";5615;830;545;1315;1570;1350
+"Herensingelkwartier";1025;155;110;300;290;165
+"Bedrijventerrein Van Houten";535;135;60;135;130;70
+"Weesp Centrum";2185;265;195;550;675;490
+"Weesp-Zuid I";570;50;45;70;110;295
+"Weesp-Zuid II";645;95;65;130;195;165
+"De Klomp";660;130;65;130;170;165
+"Aetsveld/Oostelijke Vechtoever";4385;625;490;880;1340;1050
+"Aetsveldsepolder";470;50;65;40;210;105
+"Aetsveld-Zuid";1750;245;195;415;480;410
+"Aetsveld-Noord";1620;250;160;340;475;395
+"Oostelijke Vechtoever";545;75;65;80;180;145
+"Amstel III/Bullewijk";3545;160;1195;2035;140;20
+"Hoofdcentrum-Zuidoost";15;0;5;10;5;0
+"Amstel III deel C/D-Noord";20;0;5;10;5;0
+"Amstel III deel A/B-Noord";865;105;140;550;55;5
+"Amstel III deel C/D-Zuid";0;0;0;0;0;5
+"Amstel III deel A/B-Zuid";2505;45;1015;1405;50;0
+"AMC";30;0;0;15;15;0
+"Hoge Dijk";110;5;35;45;15;10
+"Venserpolder";8515;1085;1140;2925;2250;1105
+"Venserpolder-West";5100;660;655;1680;1345;760
+"Venserpolder-Oost";3415;425;485;1245;910;350
+"Amsterdamse Poort e.o.";8260;1005;2270;2665;1700;615
+"D-buurt";1940;110;1140;545;105;40
+"F-buurt";4360;670;780;1635;1025;250
+"Amsterdamse Poort";1300;140;270;320;380;195
+"Vogeltjeswei";660;85;85;165;190;130
+"Nelson Mandelapark";0;0;0;0;0;0
+"H-buurt";7590;1225;1445;2370;1900;660
+"Hoptille";1945;255;475;790;340;90
+"Rechte H-buurt";3030;500;520;810;870;330
+"Hakfort/Huigenbos";2420;445;415;740;635;180
+"Huntum";195;30;35;25;50;55
+"Ganzenhoef e.o.";7715;1280;1275;2345;2125;685
+"E-buurt";2250;500;530;650;515;55
+"G-buurt-West";3700;470;510;1215;1030;475
+"G-buurt-Noord";1765;310;235;480;585;155
+"Geerdinkhof/Kantershof";7160;880;960;1865;1765;1690
+"G-buurt-Oost";3155;245;405;790;690;1020
+"Grunder/Koningshoef";1750;315;290;535;465;155
+"Kantershof";2250;320;260;540;610;515
+"Bijlmermuseum";7785;1330;1255;2275;1950;975
+"Bijlmermuseum-Noord";2310;360;335;495;635;485
+"Bijlmermuseum-Zuid";3115;550;500;1015;745;300
+"De Kameleon e.o.";2365;420;415;765;570;190
+"K-buurt";7440;1440;1055;2190;1860;890
+"Gooise Kant";745;215;100;295;125;10
+"Kortvoort";2855;430;325;805;750;540
+"Kelbergen";1010;190;145;235;280;160
+"K-buurt-Zuidwest";1405;240;270;360;405;130
+"K-buurt-Zuidoost";1420;360;215;490;305;55
+"Holendrecht";9500;1715;1330;2250;2380;1830
+"Holendrecht-West";2735;560;430;545;650;555
+"Holendrecht-Oost";2500;365;260;590;565;715
+"Holendrecht-Zuid";4265;790;640;1120;1165;550
+"Nellestein";3115;395;290;1030;760;640
+"L-buurt";3095;395;285;1030;750;635
+"Gaasperpark";15;0;0;0;5;5
+"Gaasperplas";5;0;5;0;5;0
+"Reigersbos";8540;1225;1030;2460;2280;1560
+"Reigersbos 1";2055;285;260;660;610;245
+"Reigersbos 2";1530;170;215;450;400;295
+"Reigersbos 3";2440;345;300;675;645;470
+"Reigersbos 4";2520;425;260;670;620;550
+"Gein";11220;1690;1345;3010;3035;2135
+"Gein 1";3005;470;405;875;770;490
+"Gein 2";1655;275;225;525;450;175
+"Gein 3";3195;425;385;710;925;755
+"Gein 4";3365;525;325;905;895;710
+"Wijk 06 Nieuw-Amsterdam";4730;670;550;975;1465;1075
+"Nieuw-Amsterdam-Centrum";4290;630;495;895;1285;980
+"Verspreide huizen Nieuw-Amsterdam";140;15;20;30;45;30
+"Amsterdamscheveld";210;30;10;50;60;50
+"Buitengeb. ten Z. v. Amsterdam-Rijnkanaa";220;35;20;40;80;50
