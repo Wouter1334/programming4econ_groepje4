@@ -245,6 +245,8 @@ library(sf)
 library(dplyr)
 library(ggplot2)
 library(readr)
+library(cbsodataR)
+
 
 wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
 ams <- wijken %>% filter(grepl("^WK0363", statcode))
@@ -295,8 +297,8 @@ ggplot(ams_joined) +
   ) +
   theme_void() +
   labs(
-    title = "Jongvolwassenen in Amsterdam, 2023",
-    subtitle = "Percentage 15-25 jaar per wijk"
+    title = "young adults/students in Amsterdam, 2023",
+    subtitle = "Percentage 15-25 years old per district"
   ) +
   theme(
     plot.title = element_text(face = "bold", size = 13, color = "#1a4a8a"),
