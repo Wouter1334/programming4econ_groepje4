@@ -68,87 +68,25 @@ This issue is relevant because approximately one in five people in Amsterdam str
 
 Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
 
-midwest is an example dataset included in the tidyverse package
+midwest is an example dataset included in the tidyverse package\
+\
 
-Grafiek 1:
-
-```{r echo=FALSE}
+```{r include=FALSE}
 library(readxl)
 gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
 View(gemiddeldehuur2023)
 
-library(dplyr)
-library(ggplot2)
-
-per_jaar <- gemiddeldehuur2023 %>%
-  group_by(Jaar) %>%
-  summarise(gem_huur = mean(`Huur gemiddeld`, na.rm = TRUE))
-
-ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
-  geom_line() +
-  geom_point() +
-  labs(
-    title = "Average Rent Price Amsterdam (All Districts)",
-    x = "Year",
-    y = "Rent Price (€)"
-  ) +
-  theme_minimal()
-```
-
-Grafiek 4:
-
-```{r}
-moeiteRondkomenAlleJaren <- read.csv2("data/moeiteRondkomenAlleJaren.csv")
-
-moeite_per_jaar <- moeiteRondkomenAlleJaren %>%
-  mutate(Jaar = as.numeric(substr(Perioden, 1, 4))) %>%
-  group_by(Jaar) %>%
-  summarise(gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)) %>%
-  arrange(Jaar) %>%
-  mutate(
-    procentuele_verandering =
-      (gem_moeite - lag(gem_moeite)) / lag(gem_moeite) * 100
-  )
-
-ggplot(moeite_per_jaar,
-       aes(x = Jaar, y = procentuele_verandering)) +
-  geom_line() +
-  geom_point() +
-  geom_vline(xintercept = 2020, linetype = "dashed") +
-  annotate("text",
-           x = 2020,
-           y = 20,
-           label = "COVID-19 Pandamic",
-           angle = 90,
-           vjust = -0.5) +
-  scale_x_continuous(
-    breaks = seq(min(moeite_per_jaar$Jaar),
-                 max(moeite_per_jaar$Jaar),
-                 by = 1)
-  ) +
-  labs(
-    title = "Percentage Change in Financial Hardship",
-    x = "Year",
-    y = "Change (%)"
-  ) +
-  theme_minimal()
-```
-
-```{r}
 library(readr)
 InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
-    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+                                     delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 library(readr)
 InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
 View(InkomenPerWijk2023Gefilterd)
 
-```
-
-```{r}
 library(readr)
 moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
-    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+                                       delim = ";", escape_double = FALSE, trim_ws = TRUE)
 
 library(dplyr)
 
@@ -169,14 +107,157 @@ Wijken_Amsterdam_2024_CBS$`CBS Wijkcode` <- NULL
 
 amsterdam_wijken_nieuw2 <- inner_join(Wijken_Amsterdam_2024_CBS, amsterdam_wijken_nieuw, by = "Codering_3")
 
+
 amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
   select(-WijkenEnBuurten, -SoortRegio_2, -Gemeentenaam_1)
 
 View(amsterdam_wijken_nieuw2)
 
+library(cbsodataR)
+
+wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+
+ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
+
+rondkomen_raw <- read_delim("data/moeiteRondkomenAlleJaren.csv",
+                            delim = ";",
+                            locale = locale(decimal_mark = ".")
+)
+
+rondkomen_2024 <- rondkomen_raw %>%
+  filter(
+    Perioden == "2024JJ00",
+    SoortRegio_2 == "Wijk    ",
+    Gemeentenaam_1 == "Amsterdam                               "
+  ) %>%
+  mutate(
+    WijkenEnBuurten = trimws(WijkenEnBuurten),
+    MoeiteMetRondkomen_32 = as.numeric(MoeiteMetRondkomen_32)
+  ) %>%
+  select(WijkenEnBuurten, MoeiteMetRondkomen_32)
+
+ams_joined <- ams %>%
+  mutate(statcode_clean = trimws(statcode)) %>%
+  left_join(rondkomen_2024, by = c("statcode_clean" = "WijkenEnBuurten"))
+
+breaks <- c(6.7, 14.8, 19.8, 23.6, 27.7, 33.4, 36.6)
+labels <- c("6,7 - 14,8", "14,8 - 19,8", "19,8 - 23,6",
+            "23,6 - 27,7", "27,7 - 33,4", "33,4 - 36,6")
+
+ams_joined <- ams_joined %>%
+  mutate(
+    rondkomen_cat = cut(
+      MoeiteMetRondkomen_32,
+      breaks = breaks,
+      labels = labels,
+      include.lowest = TRUE
+    )
+  )
+wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+ams <- wijken %>% filter(grepl("^WK0363", statcode))
+
+leeftijd_raw <- read_delim("data/Leeftijdsgroepen_wijken_buurten_Amsterdam_2023.csv",
+                           delim = ";",
+                           locale = locale(decimal_mark = ".")
+)
+
+leeftijd_wijk <- leeftijd_raw %>%
+  rename(
+    wijknaam = `Wijken en buurten`,
+    inwoners = `Bevolking/Aantal inwoners (aantal)`,
+    leeftijd_15_25 = `Bevolking/Leeftijdsgroepen/15 tot 25 jaar (aantal)`
+  ) %>%
+  mutate(wijknaam = trimws(wijknaam)) %>%
+  distinct(wijknaam, .keep_all = TRUE) %>%
+  filter(inwoners > 0) %>%
+  mutate(perc_studenten = leeftijd_15_25 / inwoners * 100) %>%
+  select(wijknaam, perc_studenten)
+
+ams_joined <- ams %>%
+  left_join(leeftijd_wijk, by = c("statnaam" = "wijknaam"))
+
+breaks <- c(0, 8, 11, 13, 16, 20, 75)
+labels <- c("0 - 8", "8 - 11", "11 - 13", "13 - 16", "16 - 20", "20+")
+
+
 ```
 
-```{r}
+## 2.2 Provide a short summary of the dataset(s)
+
+## 2.3 Describe the type of variables included
+
+# Part 3 - Quantifying
+
+## 3.1 Data cleaning
+
+## 3.2 Generate necessary variables
+
+## 3.3 Visualize temporal variation
+
+```{r echo=FALSE}
+library(readxl)
+gemiddeldehuur2023 <- read_excel("data/gemiddeldehuur2023.xlsx")
+
+library(dplyr)
+library(ggplot2)
+
+per_jaar <- gemiddeldehuur2023 %>%
+  group_by(Jaar) %>%
+  summarise(gem_huur = mean(`Huur gemiddeld`, na.rm = TRUE))
+
+ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Average Rent Price Amsterdam (All Districts)",
+    x = "Year",
+    y = "Rent Price (€)"
+  ) +
+  theme_minimal()
+```
+
+```{r include=FALSE}
+library(readr)
+InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+library(readr)
+InkomenPerWijk2023Gefilterd <- read_csv("data/InkomenPerWijk2023Gefilterd.csv")
+
+```
+
+```{r include=FALSE}
+library(readr)
+moeiteRondkomenAlleJaren <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+library(dplyr)
+
+amsterdam_wijken <- moeiteRondkomenAlleJaren %>%
+  filter(Gemeentenaam_1 == "Amsterdam") %>%
+  filter(SoortRegio_2 == "Wijk")
+
+amsterdam_wijken_nieuw <- amsterdam_wijken[
+  , !(names(amsterdam_wijken) %in% c("ID", "Leeftijd", "Marges"))
+]
+
+library(readxl)
+Wijken_Amsterdam_2024_CBS <- read_excel("data/Wijken_Amsterdam_2024_CBS.xlsx")
+
+Wijken_Amsterdam_2024_CBS$Codering_3 <- Wijken_Amsterdam_2024_CBS$`CBS Wijkcode`
+Wijken_Amsterdam_2024_CBS$`CBS Wijkcode` <- NULL
+
+amsterdam_wijken_nieuw2 <- inner_join(Wijken_Amsterdam_2024_CBS, amsterdam_wijken_nieuw, by = "Codering_3")
+
+amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
+  select(-WijkenEnBuurten, -SoortRegio_2, -Gemeentenaam_1)
+
+
+```
+
+## 3.4 Visualize spatial variation
+
+```{r echo=FALSE}
 library(sf)
 library(dplyr)
 library(ggplot2)
@@ -248,7 +329,11 @@ ggplot(ams_joined) +
 
 ```
 
-```{r}
+Here you provide a description of why the plot above is relevant to your specific social problem.
+
+## 3.5 Visualize sub-population variation
+
+```{r echo=FALSE}
 library(sf)
 library(dplyr)
 library(ggplot2)
@@ -305,7 +390,7 @@ ggplot(ams_joined) +
   ) +
   theme_void() +
   labs(
-    title = "young adults/students in Amsterdam, 2023",
+    title = "Young adults/students in Amsterdam, 2024",
     subtitle = "Percentage 15-25 years old per district"
   ) +
   theme(
@@ -317,17 +402,54 @@ ggplot(ams_joined) +
   )
 ```
 
-## 2.2 Provide a short summary of the dataset(s)
+Analyze the relationship between two variables.\
+Here you provide a description of why the plot above is relevant to your specific social problem.\
 
-## 2.3 Describe the type of variables included
+## 3.6 Event analysis
 
-# Part 3 - Quantifying
+```{r echo=FALSE}
+moeiteRondkomenAlleJaren <- read.csv2("data/moeiteRondkomenAlleJaren.csv")
 
-## 3.1 Data cleaning
+moeite_per_jaar <- moeiteRondkomenAlleJaren %>%
+  mutate(Jaar = as.numeric(substr(Perioden, 1, 4))) %>%
+  group_by(Jaar) %>%
+  summarise(gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)) %>%
+  arrange(Jaar) %>%
+  mutate(
+    procentuele_verandering =
+      (gem_moeite - lag(gem_moeite)) / lag(gem_moeite) * 100
+  )
+
+ggplot(moeite_per_jaar,
+       aes(x = Jaar, y = procentuele_verandering)) +
+  geom_line() +
+  geom_point() +
+  geom_vline(xintercept = 2020, linetype = "dashed") +
+  annotate("text",
+           x = 2020,
+           y = 20,
+           label = "COVID-19 Pandamic",
+           angle = 90,
+           vjust = -0.5) +
+  scale_x_continuous(
+    breaks = seq(min(moeite_per_jaar$Jaar),
+                 max(moeite_per_jaar$Jaar),
+                 by = 1)
+  ) +
+  labs(
+    title = "Percentage Change in Financial Hardship",
+    x = "Year",
+    y = "Change (%)"
+  ) +
+  theme_minimal()
+
+```
+
+## 
 
 Say we want to include only larger distances (above 2) in our dataset, we can filter for this.
 
-## 3.2 Generate necessary variables
+## 
 
 Variable 1
 
@@ -341,31 +463,23 @@ Variable 2
 
 ```
 
-## 3.3 Visualize temporal variation
+## 
 
 ```{r}
 
 ```
 
-## 3.4 Visualize spatial variation
+## 
 
 ```{r visualise_map}
 
 ```
 
-Here you provide a description of why the plot above is relevant to your specific social problem.
-
-## 3.5 Visualize sub-population variation
-
-## 3.6 Event analysis
-
-Analyze the relationship between two variables.
+## 
 
 ```{r analysis}
 
 ```
-
-Here you provide a description of why the plot above is relevant to your specific social problem.
 
 # Part 4 - Discussion
 
