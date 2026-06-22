@@ -474,40 +474,6 @@ ggplot(moeite_per_jaar,
 
 ## 
 
-Say we want to include only larger distances (above 2) in our dataset, we can filter for this.
-
-## 
-
-Variable 1
-
-```{r gen_var1}
-
-```
-
-Variable 2
-
-```{r gen_var2}
-
-```
-
-## 
-
-```{r}
-
-```
-
-## 
-
-```{r visualise_map}
-
-```
-
-## 
-
-```{r analysis}
-
-```
-
 # Part 4 - Discussion
 
 ## 4.1 Discuss your findings
