@@ -1,5 +1,5 @@
 ---
-title: "Template"
+title: "Financial hardship in Amsterdam"
 author: "Studentnames and studentnumbers here"
 date: "`r Sys.Date()`"
 output: pdf_document
@@ -471,8 +471,6 @@ ggplot(moeite_per_jaar,
   theme_minimal()
 
 ```
-
-## 
 
 # Part 4 - Discussion
 
