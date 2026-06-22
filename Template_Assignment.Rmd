@@ -492,12 +492,12 @@ A limitation of this analysis is that it does not include all possible determina
 
 ## 5.1 Github repository link
 
-Provide the link to your PUBLIC repository here: <https://github.com/Wouter1334/programming4econ_groepje4>
+<https://github.com/Wouter1334/programming4econ_groepje4>
 
 ## 5.2 Reference list
-
-Use APA referencing throughout your document.
 
 Centraal Bureau voor de Statistiek. (2025, September 11). *Meer mensen tevreden over financiën in 2024, zorgen minder groot*. [https://www.cbs.nl/nl-nl/nieuws/2025/37/meer-mensen-tevreden-over-financien-in-2024-zorgen-minder-groot](https://www.cbs.nl/nl-nl/nieuws/2025/37/meer-mensen-tevreden-over-financien-in-2024-zorgen-minder-groot?utm_source=chatgpt.com)
 
 Mullainathan, S., & Shafir, E. (2013). *Scarcity: Why having too little means so much*. Times Books.
+
+Buurtatlas. (z.d.). *Buurtatlas*. Volksgezondheidenzorg.info. Geraadpleegd op 22 juni 2026, van <https://buurtatlas.vzinfo.nl>
