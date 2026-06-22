@@ -437,42 +437,36 @@ When we compare both maps a pattern starts to appear. Districts with a high shar
 
 ## 3.6 Event analysis
 
-```{r echo=FALSE}
-moeiteRondkomenAlleJaren <- read.csv2("data/moeiteRondkomenAlleJaren.csv")
+```{r}
+# Base year 2016
+basis_waarde <- plot_data %>% filter(Jaar == 2016) %>% pull(Gemiddelde)
 
-moeite_per_jaar <- moeiteRondkomenAlleJaren %>%
-  mutate(Jaar = as.numeric(substr(Perioden, 1, 4))) %>%
-  group_by(Jaar) %>%
-  summarise(gem_moeite = mean(MoeiteMetRondkomen_32, na.rm = TRUE)) %>%
-  arrange(Jaar) %>%
+plot_data <- plot_data %>%
   mutate(
-    procentuele_verandering =
-      (gem_moeite - lag(gem_moeite)) / lag(gem_moeite) * 100
+    Verandering_pct = ((Gemiddelde - basis_waarde) / basis_waarde) * 100
   )
 
-ggplot(moeite_per_jaar,
-       aes(x = Jaar, y = procentuele_verandering)) +
-  geom_line() +
-  geom_point() +
-  geom_vline(xintercept = 2020, linetype = "dashed") +
-  annotate("text",
-           x = 2020,
-           y = 20,
-           label = "COVID-19 Pandamic",
-           angle = 90,
-           vjust = -0.5) +
-  scale_x_continuous(
-    breaks = seq(min(moeite_per_jaar$Jaar),
-                 max(moeite_per_jaar$Jaar),
-                 by = 1)
-  ) +
+# Plot
+ggplot(plot_data, aes(x = Jaar, y = Verandering_pct)) +
+  geom_line(color = "steelblue", linewidth = 1.2) +
+  geom_point(color = "steelblue", size = 3) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 2020, color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = 2020.3, y = max(plot_data$Verandering_pct, na.rm = TRUE),
+           label = "COVID-19 Pandemic", color = "red", hjust = 0, size = 4) +
+  scale_x_continuous(breaks = unique(plot_data$Jaar)) +
   labs(
-    title = "Percentage Change in Financial Hardship",
+    title = "Percentage change in financial difficulty – Amsterdam",
+    subtitle = "Average across all neighbourhoods, relative to 2016 (pre-COVID)",
     x = "Year",
-    y = "Change (%)"
+    y = "Change relative to 2016 (%)",
+    caption = "Source: CBS - moeiteRondkomenAlleJaren"
   ) +
-  theme_minimal()
-
+  theme_minimal() +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
 ```
 
 This graph shows the yearly percentage change in financial hardship over time. The dashed line marks 2020 when COVID-19 hit. Around that period we see a noticeable shift in the trend. This is relevant because the pandemic affected jobs and income security for a lot of people. It helps show that financial hardship is not just driven by slow structural change. Sudden shocks like COVID-19 can also push more people into financial difficulty.
