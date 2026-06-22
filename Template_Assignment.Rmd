@@ -174,8 +174,7 @@ The dataset Wijken_Amsterdam_2024_CBS links the codes for the neighbourhoods use
 
 The dataset amsterdam_wijken_nieuw2 contains the codes from dataset moeiteRondkomenAlleJaren, aswell as the correct neighbourhoods from dataset Wijken_Amsterdam_2024_CBS and links it to the amount of families who have difficulty to make ends meet from multiple periods.
 
-The dataset  gemiddeldehuur2023 contains the average rent in a neighbourhood for all neighbourhoods of Amsterdam. This data is available for multiple years.
-Limitations of the datasets:
+The dataset gemiddeldehuur2023 contains the average rent in a neighbourhood for all neighbourhoods of Amsterdam. This data is available for multiple years. Limitations of the datasets:
 
 This study has several limitations.
 
