@@ -27,7 +27,7 @@ Nahar Singh 2860210
 
 Joran Heesemans 2864151
 
-Wouter Sanders
+Wouter Sanders 2899366
 
 Romijn Bouw 2899615
 
@@ -166,11 +166,20 @@ labels <- c("0 - 8", "8 - 11", "11 - 13", "13 - 16", "16 - 20", "20+")
 
 ## 2.2 Provide a short summary of the dataset(s)
 
+The dataset InkomenPerWijk2023Gefilterd contains all the neighbourhoods of Amsterdam aswell as the average income of a household in a year for each of these neighborhoods.
+
+The dataset moeiteRondkomenAlleJaren contains codes for all the neighbourhoods of The Netherlands and the amount of families who have difficulty to make ends meet. This data is available for multiple years
+
+The dataset Wijken_Amsterdam_2024_CBS links the codes for the neighbourhoods used in dataset moeiteRondkomenAlleJaren to the correct neighbourhoods.
+
+The dataset amsterdam_wijken_nieuw2 contains the codes from dataset moeiteRondkomenAlleJaren, aswell as the correct neighbourhoods from dataset Wijken_Amsterdam_2024_CBS and links it to the amount of families who have difficulty to make ends meet from multiple periods.
+
+The dataset  gemiddeldehuur2023 contains the average rent in a neighbourhood for all neighbourhoods of Amsterdam. This data is available for multiple years.
 Limitations of the datasets:
 
 This study has several limitations.
 
-First, the datasets are used at neighbourhood level, which means individual household variation cannot be observed. This may lead to a problem where conclusions of individuals are based on group-level data
+First, the datasets are used at neighbourhood level, which means individual household variation cannot be observed. This may lead to a problem where conclusions of individuals are based on group-level data.
 
 Second, the main variable (*Moeite met rondkomen*) is data made from self reports, meaning that subjective interpretation may affect responses.
 
