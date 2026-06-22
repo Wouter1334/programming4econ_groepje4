@@ -243,6 +243,8 @@ ggplot(per_jaar, aes(x = Jaar, y = gem_huur)) +
   theme_minimal()
 ```
 
+This graph shows how average rent in Amsterdam changed over the years. The trend is clearly upward. Rent more than doubled between 2005 and 2023. This matters because rising rent is one of the main drivers behind financial hardship. When rent grows faster than income people have less room left for other expenses. This graph shows why housing costs are such a big part of our social problem.\
+
 ```{r include=FALSE}
 library(readr)
 InkomenWijkenAmsterdam <- read_delim("data/InkomenWijkenAmsterdam.csv", 
@@ -472,6 +474,8 @@ ggplot(moeite_per_jaar,
   theme_minimal()
 
 ```
+
+This graph shows the yearly percentage change in financial hardship over time. The dashed line marks 2020 when COVID-19 hit. Around that period we see a noticeable shift in the trend. This is relevant because the pandemic affected jobs and income security for a lot of people. It helps show that financial hardship is not just driven by slow structural change. Sudden shocks like COVID-19 can also push more people into financial difficulty.
 
 # Part 4 - Discussion
 
