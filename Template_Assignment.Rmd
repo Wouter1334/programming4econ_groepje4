@@ -356,7 +356,7 @@ ggplot(ams_joined) +
 
 ```
 
-Here you provide a description of why the plot above is relevant to your specific social problem.
+This map shows where financial hardship is highest across Amsterdam. Some districts clearly struggle a lot more than others. That already tells us something important. Money problems are not spread evenly across the city. It is probably connected to differences in housing costs and income between neighbourhoods. This map gives us a starting point to figure out where help is actually needed.
 
 ## 3.5 Visualize sub-population variation
 
@@ -429,8 +429,9 @@ ggplot(ams_joined) +
   )
 ```
 
-Analyze the relationship between two variables.\
-Here you provide a description of why the plot above is relevant to your specific social problem.\
+This map shows where young adults and students live across Amsterdam. We added this map because students are often seen as a financially vulnerable group. They usually have little or unstable income. They also pay relatively high rent compared to what they earn. This map lets us check which districts have the youngest population. That sets up the comparison with the hardship map in the next part.\
+\
+When we compare both maps a pattern starts to appear. Districts with a high share of young adults often also show higher financial hardship. This suggests student neighbourhoods are not just young but also financially squeezed. It fits the bigger picture of our social problem. Housing costs in Amsterdam hit younger residents especially hard. So age and financial struggle seem to move together in several parts of the city.\
 
 ## 3.6 Event analysis
 
