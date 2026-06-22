@@ -37,11 +37,7 @@ Rayan Kajdouh 2863297
 
 Tutorial 1 Group 4
 
-Include your tutorial lecturer's name
-
 # Part 1 - Identify a Social Problem
-
-Use APA referencing throughout your document. [Here's a link to some explanation.](https://www.mendeley.com/guides/apa-citation-guide/)
 
 ## 1.1 Describe the Social Problem
 
@@ -55,12 +51,7 @@ This issue has become increasingly relevant due to rising housing costs, inflati
 
 # Part 2 - Data Sourcing
 
-## 2.1 Load in the data
-
-Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
-
-midwest is an example dataset included in the tidyverse package\
-\
+## 2.1 Load in the data 
 
 ```{r include=FALSE}
 library(readxl)
