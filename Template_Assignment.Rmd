@@ -1,6 +1,6 @@
 ---
 title: "Financial hardship in Amsterdam"
-author: "Studentnames and studentnumbers here"
+author: ""
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
@@ -51,7 +51,7 @@ This issue has become increasingly relevant due to rising housing costs, inflati
 
 # Part 2 - Data Sourcing
 
-## 2.1 Load in the data 
+## 2.1 Load in the data
 
 ```{r include=FALSE}
 library(readxl)
