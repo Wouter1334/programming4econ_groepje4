@@ -7,16 +7,7 @@ output: pdf_document
 
 # Set-up your environment
 
-```{r package_install, include=FALSE}
-# install.packages("tidyverse")
-# install.packages("yaml")
-# install.packages("rmarkdown")
-# install.packages("ggplot2")
-# install.packages("dplyr")
-# install.packages(c("sf", "tmap" , "cbsodataR"))
-# install.packages("tinytex")
-#tinytex::install_tinytex()
-```
+f`{r package_install, include=FALSE} # install.packages("tidyverse") # install.packages("yaml") # install.packages("rmarkdown") # install.packages("ggplot2") # install.packages("dplyr") # install.packages(c("sf", "tmap" , "cbsodataR")) # install.packages("tinytex") #tinytex::install_tinytex()`
 
 ```{r packages, include=FALSE}
 require(tidyverse)
@@ -60,7 +51,7 @@ Many people living in Amsterdam have difficulty covering their daily expenses, s
 
 **Why is this relevant?**
 
-This issue is relevant because approximately one in five people in Amsterdam struggles to make ends meet. Rising living costs, high housing prices, inflation, and relatively low incomes are some of the factors contributing to this problem. As a result, many residents face financial insecurity, making it an important social issue that affects both individuals and the wider community.
+This issue has become increasingly relevant due to rising housing costs, inflation, and unequal income growth across households. Recent data from the Centraal Bureau voor de Statistiek (CBS, 2025) show that in 2024, 13.3% of Dutch adults reported having difficulty making ends meet, while financial dissatisfaction remains concentrated among lower-income groups. Additionally, 26.1% of adults reported having many financial worries about their future, indicating that financial insecurity remains a structural issue in Dutch society. Research by Mullainathan and Shafir (2013) shows that financial scarcity can lead to chronic stress, reduced decision-making capacity, and lower overall wellbeing. In cities like Amsterdam, where living costs and rent prices have increased substantially over the last two decades, lower-income households are more vulnerable to financial pressure.
 
 # Part 2 - Data Sourcing
 
@@ -184,13 +175,49 @@ labels <- c("0 - 8", "8 - 11", "11 - 13", "13 - 16", "16 - 20", "20+")
 
 ## 2.2 Provide a short summary of the dataset(s)
 
+Limitations of the datasets:
+
+This study has several limitations.
+
+First, the datasets are used at neighbourhood level, which means individual household variation cannot be observed. This may lead to a problem where conclusions of individuals are based on group-level data
+
+Second, the main variable (*Moeite met rondkomen*) is data made from self reports, meaning that subjective interpretation may affect responses.
+
+Third, the student variable may overestimate the actual student population, since not everyone aged 15–25 is enrolled in education.
+
+Finally, important variables such as debt, savings, household composition, education level, and employment type are missing. These factors may also strongly influence financial situations.
+
 ## 2.3 Describe the type of variables included
 
 # Part 3 - Quantifying
 
 ## 3.1 Data cleaning
 
+Before analysis, the datasets required several cleaning steps to make sure that the graphs could be made without gaps and with consistent data.
+
+First, to start off after importing the raw datasets, all datasets were filtered to include only neighbourhood-level observations for Amsterdam. This improved the focus of the analysis on Amsterdam.
+
+Second, irrelevant variables such as identification numbers, age categories, and margin-of-error variables were removed to simplify the dataset.
+
+Third, string variables such as neighbourhood names and codes were cleaned using `trimws()` to remove unnecessary spaces. This was necessary for merging datasets accurately.
+
+Fourth, duplicate observations were removed using `distinct()`, ensuring that each neighbourhood appeared only once in the dataset. While this improves consistency, it may hide meaningful repeated measurements.
+
+Lastly, missing values were excluded during calculations by applying `na.rm = TRUE`. This prevents computational errors.
+
+To sum the impact of these changes up, the steps improved overall data quality and usefulness, however they did reduce some detail and have potential limitations.
+
 ## 3.2 Generate necessary variables
+
+To improve the analysis, we made new variables from the original datasets.
+
+The variable **`perc_studenten`** was created by dividing the number of residents aged 15–25 by the total number of inhabitants in each neighbourhood and multiplying this by 100. This variable measures the percentage of young adults in a neighbourhood.
+
+Second, we created **`rondkomen_cat`**. This variable groups the percentage of people who struggle to make ends meet into six categories. The categories range from **6.7% to 36.6%**. This makes it easier to show the data on a map.
+
+Third, we created **`studenten_cat`**. This variable groups the percentage of young people into six categories, from **0% to above 20%**. This helps compare neighbourhoods more easily.
+
+These new variables make the data easier to understand and easier to visualise. However, grouping values into categories means that some detailed information is lost.
 
 ## 3.3 Visualize temporal variation
 
@@ -499,8 +526,12 @@ A limitation of this analysis is that it does not include all possible determina
 
 ## 5.1 Github repository link
 
-Provide the link to your PUBLIC repository here: https://github.com/Wouter1334/programming4econ_groepje4
+Provide the link to your PUBLIC repository here: <https://github.com/Wouter1334/programming4econ_groepje4>
 
 ## 5.2 Reference list
 
 Use APA referencing throughout your document.
+
+Centraal Bureau voor de Statistiek. (2025, September 11). *Meer mensen tevreden over financiën in 2024, zorgen minder groot*. [https://www.cbs.nl/nl-nl/nieuws/2025/37/meer-mensen-tevreden-over-financien-in-2024-zorgen-minder-groot](https://www.cbs.nl/nl-nl/nieuws/2025/37/meer-mensen-tevreden-over-financien-in-2024-zorgen-minder-groot?utm_source=chatgpt.com)
+
+Mullainathan, S., & Shafir, E. (2013). *Scarcity: Why having too little means so much*. Times Books.
