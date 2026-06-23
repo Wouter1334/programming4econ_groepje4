@@ -7,7 +7,17 @@ output: pdf_document
 
 # Set-up your environment
 
-f`{r package_install, include=FALSE} # install.packages("tidyverse") # install.packages("yaml") # install.packages("rmarkdown") # install.packages("ggplot2") # install.packages("dplyr") # install.packages(c("sf", "tmap" , "cbsodataR")) # install.packages("tinytex") #tinytex::install_tinytex()`
+```{r include=FALSE, eval=FALSE}
+install.packages("tidyverse")
+install.packages("yaml")
+install.packages("rmarkdown")
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages(c("sf", "tmap", "cbsodataR"))
+install.packages("tinytex")
+tinytex::install_tinytex(force = TRUE)
+```
+
 
 ```{r packages, include=FALSE}
 require(tidyverse)
@@ -293,7 +303,7 @@ amsterdam_wijken_nieuw2 <- amsterdam_wijken_nieuw2 %>%
 
 ## 3.4 Visualize spatial variation
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(sf)
 library(dplyr)
 library(ggplot2)
@@ -369,7 +379,7 @@ This map shows where financial hardship is highest across Amsterdam. Some distri
 
 ## 3.5 Visualize sub-population variation
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(sf)
 library(dplyr)
 library(ggplot2)
@@ -438,15 +448,18 @@ ggplot(ams_joined) +
   )
 ```
 
-This map shows where young adults and students live across Amsterdam. We added this map because students are often seen as a financially vulnerable group. They usually have little or unstable income. They also pay relatively high rent compared to what they earn. This map lets us check which districts have the youngest population. That sets up the comparison with the hardship map in the next part.\
-\
+This map shows where young adults and students live across Amsterdam. We added this map because students are often seen as a financially vulnerable group. They usually have little or unstable income. They also pay relatively high rent compared to what they earn. This map lets us check which districts have the youngest population. That sets up the comparison with the hardship map in the next part.
+
+
 When we compare both maps a pattern starts to appear. Districts with a high share of young adults often also show higher financial hardship. This suggests student neighbourhoods are not just young but also financially squeezed. It fits the bigger picture of our social problem. Housing costs in Amsterdam hit younger residents especially hard. So age and financial struggle seem to move together in several parts of the city.\
 
 ## 3.6 Event analysis
 
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(ggplot2)
+
+
 
 plot_data <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
     delim = ";", escape_double = FALSE, trim_ws = TRUE)
