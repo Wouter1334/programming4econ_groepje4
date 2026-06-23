@@ -437,15 +437,34 @@ When we compare both maps a pattern starts to appear. Districts with a high shar
 ## 3.6 Event analysis
 
 ```{r}
-# Base year 2016
-basis_waarde <- plot_data %>% filter(Jaar == 2016) %>% pull(Gemiddelde)
+library(tidyverse)
+library(ggplot2)
+
+plot_data <- read_delim("data/moeiteRondkomenAlleJaren.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+
+
+plot_data <- plot_data %>%
+  filter(Gemeentenaam_1 == "Amsterdam", SoortRegio_2 == "Gemeente") %>%
+  mutate(
+    Jaar = as.numeric(substr(Perioden, 1, 4)),
+    Gemiddelde = as.numeric(MoeiteMetRondkomen_32)
+  ) %>%
+  select(Jaar, Gemiddelde)
+
+
+basis_waarde <- plot_data %>% 
+  filter(Jaar == 2016) %>% 
+  pull(Gemiddelde) %>%
+  first()
+
 
 plot_data <- plot_data %>%
   mutate(
     Verandering_pct = ((Gemiddelde - basis_waarde) / basis_waarde) * 100
   )
 
-# Plot
+
 ggplot(plot_data, aes(x = Jaar, y = Verandering_pct)) +
   geom_line(color = "steelblue", linewidth = 1.2) +
   geom_point(color = "steelblue", size = 3) +
