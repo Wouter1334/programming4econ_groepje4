@@ -1,6 +1,6 @@
 ---
 title: "Financial hardship in Amsterdam"
-author: "Studentnames and studentnumbers here"
+author: ""
 date: "`r Sys.Date()`"
 output: pdf_document
 ---
@@ -27,7 +27,7 @@ Nahar Singh 2860210
 
 Joran Heesemans 2864151
 
-Wouter Sanders
+Wouter Sanders 2899366
 
 Romijn Bouw 2899615
 
@@ -37,11 +37,7 @@ Rayan Kajdouh 2863297
 
 Tutorial 1 Group 4
 
-Include your tutorial lecturer's name
-
 # Part 1 - Identify a Social Problem
-
-Use APA referencing throughout your document. [Here's a link to some explanation.](https://www.mendeley.com/guides/apa-citation-guide/)
 
 ## 1.1 Describe the Social Problem
 
@@ -56,11 +52,6 @@ This issue has become increasingly relevant due to rising housing costs, inflati
 # Part 2 - Data Sourcing
 
 ## 2.1 Load in the data
-
-Preferably from a URL, but if not, make sure to download the data and store it in a shared location that you can load the data in from. Do not store the data in a folder you include in the Github repository!
-
-midwest is an example dataset included in the tidyverse package\
-\
 
 ```{r include=FALSE}
 library(readxl)
@@ -175,11 +166,19 @@ labels <- c("0 - 8", "8 - 11", "11 - 13", "13 - 16", "16 - 20", "20+")
 
 ## 2.2 Provide a short summary of the dataset(s)
 
-Limitations of the datasets:
+The dataset InkomenPerWijk2023Gefilterd contains all the neighbourhoods of Amsterdam aswell as the average income of a household in a year for each of these neighborhoods.
+
+The dataset moeiteRondkomenAlleJaren contains codes for all the neighbourhoods of The Netherlands and the amount of families who have difficulty to make ends meet. This data is available for multiple years
+
+The dataset Wijken_Amsterdam_2024_CBS links the codes for the neighbourhoods used in dataset moeiteRondkomenAlleJaren to the correct neighbourhoods.
+
+The dataset amsterdam_wijken_nieuw2 contains the codes from dataset moeiteRondkomenAlleJaren, aswell as the correct neighbourhoods from dataset Wijken_Amsterdam_2024_CBS and links it to the amount of families who have difficulty to make ends meet from multiple periods.
+
+The dataset gemiddeldehuur2023 contains the average rent in a neighbourhood for all neighbourhoods of Amsterdam. This data is available for multiple years. Limitations of the datasets:
 
 This study has several limitations.
 
-First, the datasets are used at neighbourhood level, which means individual household variation cannot be observed. This may lead to a problem where conclusions of individuals are based on group-level data
+First, the datasets are used at neighbourhood level, which means individual household variation cannot be observed. This may lead to a problem where conclusions of individuals are based on group-level data.
 
 Second, the main variable (*Moeite met rondkomen*) is data made from self reports, meaning that subjective interpretation may affect responses.
 
