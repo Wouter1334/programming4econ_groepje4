@@ -188,6 +188,14 @@ Finally, important variables such as debt, savings, household composition, educa
 
 ## 2.3 Describe the type of variables included
 
+The variables that are used in the datasets are average rent which is called huur gemiddeld, the percentage of people who have difficulty to make ends meet which is called moeitemetrondkomen_32 and the average rent in a neighbourhood divided by 1000 which is called Inkomen/Inkomen van huishoudens/Gem. gestandaardiseerd inkomen van huish (x 1 000 euro) (ascending). All of these variables are numeric variables and ratios because they all have a true zero point and it is obvious which value is higher.
+
+the variables Jaar and Perioden both show a date in time Jaar is rounded to years while Perioden shows years and months. This is a numeric variable and an interval since there is no true zero point but the difference between values is meaningful.
+
+The variables Wijken en buurten,WijkenEnBuurten, Wijknaam and Naam all refer to the names of neighbourhoods. These are categorial variables and nominal variables, because they have no natural order and are only categorical variables.
+
+The variables CBS Wijkcode and Codering_3 both refer to codes which are linked to certain neighbourhoods, These are also categorial variables and nominal variables, because they have no natural order and are only categorical variables.
+
 # Part 3 - Quantifying
 
 ## 3.1 Data cleaning
