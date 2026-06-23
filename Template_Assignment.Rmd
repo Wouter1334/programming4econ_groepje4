@@ -310,7 +310,9 @@ library(ggplot2)
 library(readr)
 library(cbsodataR)
 
-wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+wijken <- suppressMessages(suppressWarnings(
+  st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson", quiet = TRUE)
+))
 
 ams <- wijken %>% filter(statcode %in% amsterdam_wijken_nieuw$WijkenEnBuurten)
 
@@ -387,7 +389,10 @@ library(readr)
 library(cbsodataR)
 
 
-wijken <- st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson")
+wijken <- suppressMessages(suppressWarnings(
+  st_read("https://cartomap.github.io/nl/wgs84/wijk_2023.geojson", quiet = TRUE)
+))
+
 ams <- wijken %>% filter(grepl("^WK0363", statcode))
 
 leeftijd_raw <- read_delim("data/Leeftijdsgroepen_wijken_buurten_Amsterdam_2023.csv",
